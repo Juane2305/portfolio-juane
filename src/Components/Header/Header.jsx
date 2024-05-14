@@ -27,7 +27,7 @@ export default function HamburgerMenu() {
       <nav>
         <section className="MOBILE-MENU flex justify-between items-center lg:hidden ">
           <a href="#home">
-            <img src="https://res.cloudinary.com/dfschbyq2/image/upload/v1708213198/Dise%C3%B1o_sin_t%C3%ADtulo__12_-removebg-preview_fyidua.png" alt="logo" className="w-[12rem] lg:hidden"/>
+            <h1 className="w-[12rem] lg:hidden"> Logo</h1>
           </a>
           <div
             className="HAMBURGER-ICON space-y-2 pr-9"
@@ -72,9 +72,9 @@ export default function HamburgerMenu() {
             </ul>
           </div>
         </section>
-        <div className="hidden lg:flex w-full items-center">
+        <div className="hidden lg:flex w-full items-center py-7">
           
-          <ul className="DESKTOP-MENU hidden space-x-14 lg:flex w-full justify-center items-center text-[#2B3033] font-bold">
+          <ul className="DESKTOP-MENU hidden space-x-14 lg:flex w-full justify-center items-center text-white font-bold">
             <li className="transform hover:scale-105 duration-200">
               <a href="#home">Inicio</a>
             </li>
@@ -82,10 +82,10 @@ export default function HamburgerMenu() {
               <a href="#about">Sobre mí</a>
             </li>
             <li>
-              <a href="#home"><img src="https://res.cloudinary.com/dfschbyq2/image/upload/v1708213198/Dise%C3%B1o_sin_t%C3%ADtulo__12_-removebg-preview_fyidua.png" alt="" className="w-[12rem] hidden lg:flex justify-start"/></a>
+              <h1 className="w-[12rem] lg:hidden text-white"> Logo</h1>
             </li>
             <li className="transform hover:scale-105 duration-200">
-              <a href="#services">Servicios</a>
+              <a href="#services">Proyectos</a>
             </li>
             <li className="transform hover:scale-105 duration-200">
               <a href="#contact">Contacto</a>

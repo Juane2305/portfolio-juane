@@ -1,9 +1,15 @@
 import React from 'react';
 import { Separator } from "@/Components/ui/separator"
-
+import { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import Atropos from 'atropos/react';
 
 const AboutMe = () => {
 
+    useEffect(()=>{
+        Aos.init({duration: 1000});
+      },[])
 
     const certifications = [
         {
@@ -24,9 +30,9 @@ const AboutMe = () => {
 
 
     return (
-        <div className='bg-[#E8E8D8] bg-cover'>
-            <h1 className='text-[4rem] pt-10 text-[#2B3033] font-bold text-center'>Who am I?</h1>
-            <div className='flex justify-center lg:justify-around items-center pt-5 pb-10'>
+        <div className='bg-[#E8E8D8] bg-cover pb-32'>
+            <h1 className='text-[4rem] pt-10 text-[#2B3033] font-bold text-center' data-aos="fade-right" data-aos-duration="2000">Who am I?</h1>
+            <div className='flex justify-center lg:justify-evenly items-center pt-5 pb-10'>
                 <div className=' px-5 lg:w-[50%] flex items-center text-[20px] md:text-[25px] font-semibold text-[#2B3033]'>
                     <p className='cursor-default'>Hey there! I'm Juan Emilio Elizondo, a full-stack developer based in Argentina, specializing in JavaScript (React and Node.js), PostgreSQL, HTML, CSS, and Tailwind CSS. Alongside a partner, I co-founded ELIZCA, where we craft diverse websites tailored to various needs. Let's collaborate and bring your web projects to life with <a href='https://www.elizca.com' target='_blank' className='text-[#7B4896] hover:underline'>ELIZCA!</a></p>
                 </div>
@@ -37,9 +43,10 @@ const AboutMe = () => {
             <div className='flex justify-center py-10 '>
                 <Separator className="w-[70%] bg-black"/>
             </div>
-            <section id='certifications' className='flex justify-around w-full  text-[#2B3033] pt-20'>
+            <section id='certifications' className=' flex justify-evenly w-full  text-[#2B3033] pt-20'>
                 {certifications.map((item)=>(
-                    <div className='w-[30rem] h-[30rem]' key={item.id}>
+                    <Atropos className='my-atropos shadow-sm rounded-xl' shadow={false} highlight={false} key={item.id}>
+                    <div className='w-[30rem] h-[20rem] bg-[#E8E8D8] rounded-xl' key={item.id}>
                         <div className='border-[#2B3033] border-2 text-[#2B3033] font-light flex justify-between items-center'>
                             <div className='bg-[#7B4896] text-[#F7F7E6] h-[3rem] flex items-center px-10'>
                                 {item.school}
@@ -59,6 +66,7 @@ const AboutMe = () => {
                         </div>
                         
                     </div>
+                    </Atropos>
                 ))}
             </section>
         </div>
