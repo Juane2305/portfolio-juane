@@ -65,7 +65,7 @@ const ContactUs = () => {
 
     return (
       <div id='contact' className="h-full w-full bg-[#E8E8D8] py-24">
-        <h1 className='text-[4rem] pt-10 text-[#2B3033] font-bold text-center'>
+        <h1 className='text-[2rem] lg:text-[4rem] pt-10 text-[#2B3033] font-bold text-center'>
           Contact
         </h1>
         {/* <img src={background} alt="" className='absolute right-0'/> */}

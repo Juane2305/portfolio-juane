@@ -20,22 +20,25 @@ export default function HamburgerMenu() {
     };
   }, []);
 
-  const navClasses = `fixed pt-4 z-20 w-full backdrop-filter transition-all duration-300 ${scrolled ? 'bg-[#252525]' : ''}`;
+  const navClasses = `fixed py-4 z-20 w-full backdrop-filter transition-all duration-300 ${scrolled ? 'bg-[#252525]' : ''}`;
+  const hamburgerClass= `block h-1 w-8 animate-pulse rounded-lg bg-purple-800 ${scrolled ? 'bg-white' : ''}`
+  const hamburgerClass2= `block h-1 w-8 animate-pulse rounded-lg bg-black ${scrolled ? 'bg-white' : ''}`
 
   return (
     <div className={navClasses}>
       <nav>
-        <section className="MOBILE-MENU flex justify-between items-center lg:hidden ">
+        <section className="MOBILE-MENU flex justify-between items-center lg:hidden">
           <a href="#home">
-            <h1 className="w-[12rem] lg:hidden"> Logo</h1>
+            {scrolled ? <img className="lg:hidden w-[7rem] ml-4 mt-4" src="https://res.cloudinary.com/dfschbyq2/image/upload/v1715742979/JUANE-removebg-preview_2_gp4ulf.png" alt="logo"></img> : <img className="lg:hidden w-[7rem] ml-4 mt-2" src="https://res.cloudinary.com/dfschbyq2/image/upload/v1715742978/JUANE__1_-removebg-preview_lqqldh.png" alt="logo"></img>}
+            
           </a>
           <div
             className="HAMBURGER-ICON space-y-2 pr-9"
             onClick={() => setIsNavOpen((prev) => !prev)} // toggle isNavOpen state on click
           >
-            <span className="block h-1 w-8 animate-pulse rounded-lg bg-black"></span>
-            <span className="block h-1 w-8 animate-pulse rounded-lg bg-black"></span>
-            <span className="block h-1 w-8 animate-pulse rounded-lg bg-black"></span>
+            <span className={hamburgerClass}></span>
+            <span className={hamburgerClass2}></span>
+            <span className={hamburgerClass}></span>
           </div>
 
           <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
@@ -56,7 +59,7 @@ export default function HamburgerMenu() {
                 <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
             </div>
-            <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]" >
+            <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px] " >
               <li className="border-b border-gray-400 my-8 uppercase">
                 <a href="#home"onClick={() => setIsNavOpen(false)}>Inicio</a>
               </li>

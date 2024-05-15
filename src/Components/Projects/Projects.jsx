@@ -99,7 +99,7 @@ const Projects = () => {
     
 
     return (
-      <div className='bg-[#E8E8D8]'>
+      <div className='bg-[#E8E8D8] hidden'>
         <h1 className='text-[4rem] pt-10 text-[#2B3033] font-bold text-center'>Some of my best projects</h1>
         <div className='w-full flex justify-center items-center bg-purple-400 mt-20 mb-5' data-aos="fade-up">
           <h2 id="projects" className="text-purple-950 font-black text-[30px] sm:text-[40px] text-center cursor-default z-20 py-3" >

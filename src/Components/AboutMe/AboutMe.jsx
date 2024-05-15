@@ -17,6 +17,7 @@ const AboutMe = () => {
             name: 'Certified Tech Developer',
             year: 2022,
             school: 'Digital House',
+            pdf:'/DigitalHouse.pdf',
             description: 'Graduated from the Certified Tech Developer program, a cutting-edge initiative created in collaboration by Globant and Mercado Libre, offered in partnership with Digital House. This comprehensive program spanned over 1500 hours of theoretical and practical instruction, providing a solid foundation in technology, development, and teamwork.'
         },
         {
@@ -24,6 +25,7 @@ const AboutMe = () => {
             name: 'Professional Developer',
             year: 2023,
             school: 'Henry Bootcamp',
+            pdf:'/HENRY.pdf',
             description: 'Graduated as a Full Stack Web Developer from "Henry" bootcamp, having successfully completed the program within a period of 4 months, including collaborative projects in teams of up to 8 people.'
         }
     ]
@@ -31,9 +33,9 @@ const AboutMe = () => {
 
     return (
         <div className='bg-[#E8E8D8] bg-cover pb-32'>
-            <h1 className='text-[4rem] pt-10 text-[#2B3033] font-bold text-center' data-aos="fade-right" data-aos-duration="2000">Who am I?</h1>
+            <h1 className='text-[2rem] lg:text-[4rem] pt-10 text-[#2B3033] font-bold text-center' data-aos="fade-right" data-aos-duration="2000">Who am I?</h1>
             <div className='flex justify-center lg:justify-evenly items-center pt-5 pb-10'>
-                <div className=' px-5 lg:w-[50%] flex items-center text-[20px] md:text-[25px] font-semibold text-[#2B3033]'>
+                <div className=' px-5 lg:w-[50%] flex items-center text-lg md:text-[25px] font-semibold text-[#2B3033]'>
                     <p className='cursor-default'>Hey there! I'm Juan Emilio Elizondo, a full-stack developer based in Argentina, specializing in JavaScript (React and Node.js), PostgreSQL, HTML, CSS, and Tailwind CSS. Alongside a partner, I co-founded ELIZCA, where we craft diverse websites tailored to various needs. Let's collaborate and bring your web projects to life with <a href='https://www.elizca.com' target='_blank' className='text-[#7B4896] hover:underline'>ELIZCA!</a></p>
                 </div>
                 <div>
@@ -41,12 +43,64 @@ const AboutMe = () => {
                 </div>
             </div>
             <div className='flex justify-center py-10 '>
-                <Separator className="w-[70%] bg-black"/>
+                <Separator className="w-[70%] bg-gray-800 animate-pulse"/>
             </div>
-            <section id='certifications' className=' flex justify-evenly w-full  text-[#2B3033] pt-20'>
+            
+
+            {/* VERSION MOBILE */}
+            <section id='certificationsDesktop' className='flex lg:hidden justify-evenly w-full gap-28 text-[#2B3033] pt-20 flex-wrap'>
+                {certifications.map((item)=>(
+                    <div className='w-[18rem]  sm:w-[25rem] bg-[#E8E8D8] rounded-xl shadow-2xl' key={item.id}>
+                        <div className='border-[#702d97] border-2 rounded-t-2xl text-[#2B3033] font-light flex justify-between items-center'>
+                            <div className='bg-[#7B4896] text-[#F7F7E6] rounded-t-xl h-[3rem] flex items-center px-10 '>
+                                {item.school}
+                            </div>
+                            <div className='pr-5 font-bold'>
+                                {item.year}
+                            </div>
+                        </div>
+                        
+                        <div className='px-2 py-5'>
+                            <div className=' pt-3 pb-3 text-[20px]  text-[#2B3033] font-bold'>
+                                {item.name}
+                            </div>
+                            <div className='pt-7 pb-4 font-semibold text-[#2B3033] text-[17px]'>
+                                {item.description}
+                            </div>
+                            <a href={item.pdf} download>
+                                <p className='bg-[#7e5c91] rounded-xl text-center py-2 my-3 text-white hover:bg-[#b467dd] '>Download Certificate</p>
+                            </a>
+                        </div>
+                    </div>
+                ))}
+                <div className='w-[18rem]  sm:w-[25rem] bg-[#E8E8D8] rounded-xl shadow-2xl'>
+                    <div className='border-[#702d97] border-2 rounded-t-2xl text-[#2B3033] font-light flex justify-between items-center'>
+                        <div className='bg-[#7B4896] text-[#F7F7E6] rounded-t-xl h-[3rem] flex items-center px-10 '>
+                            <p>EF SET</p>
+                        </div>
+                        <div className='pr-5 font-bold'>
+                            <p>2023</p>
+                        </div>
+                    </div>
+                        
+                    <div className='px-2 py-5'>
+                        <div className=' pt-3 pb-3 text-[20px]  text-[#2B3033] font-bold'>
+                            <p>English Certificate</p>
+                        </div>
+                        <div className='pt-7 pb-4 font-semibold text-[#2B3033] text-[17px]'>
+                            <a href="EFSETCertificate.pdf" download>
+                                <p className='bg-[#7B4896] rounded-xl text-center py-2 text-white hover:bg-[#b467dd]'>Download Certificate</p>
+                            </a>
+                        </div>
+                    </div>  
+                </div>
+            </section>
+            
+            {/* VERSION DESKTOP */}
+            <section id='certificationsDesktop' className='hidden  lg:flex justify-evenly w-full  text-[#2B3033] pt-20 flex-wrap'>
                 {certifications.map((item)=>(
                     <Atropos className='my-atropos shadow-sm rounded-xl' shadow={false} highlight={false} key={item.id}>
-                    <div className='w-[30rem] h-[20rem] bg-[#E8E8D8] rounded-xl' key={item.id}>
+                    <div className='w-[30rem] bg-[#E8E8D8] rounded-xl h-full' key={item.id}>
                         <div className='border-[#2B3033] border-2 text-[#2B3033] font-light flex justify-between items-center'>
                             <div className='bg-[#7B4896] text-[#F7F7E6] h-[3rem] flex items-center px-10'>
                                 {item.school}
@@ -56,19 +110,49 @@ const AboutMe = () => {
                             </div>
                         </div>
                         
-                        <div className=''>
-                            <div className=' pt-3 pb-3 text-[20px]  text-[#2B3033] font-bold'>
-                                {item.name}
-                            </div>
-                            <div className='pt-7 pb-4 font-semibold text-[#2B3033] text-[17px]'>
-                                {item.description}
-                            </div>
+                        <div>
+                                <section >
+                                    <div className=' pt-3 pb-3 text-[20px]  text-[#2B3033] font-bold'>
+                                        {item.name}
+                                    </div>
+                                    <div className='pt-7 pb-4 font-semibold text-[#2B3033] text-[17px]'>
+                                        {item.description}
+                                    </div>
+                                </section>
+                                <a href={item.pdf} download className=''>
+                                    <p className='bg-[#7e5c91] rounded-xl text-center py-2 my-3 text-white hover:bg-[#b467dd] '>Download Certificate</p>
+                                </a>
                         </div>
                         
                     </div>
                     </Atropos>
                 ))}
             </section>
+            <div className='flex justify-center'>
+                <Atropos className='my-atropos shadow-sm rounded-xl' shadow={false} highlight={false}>
+                    <div className='w-[18rem]  sm:w-[25rem] bg-[#E8E8D8] rounded-xl shadow-2xl mt-24'>
+                        <div className='border-[#702d97] border-2 rounded-t-2xl text-[#2B3033] font-light flex justify-between items-center'>
+                            <div className='bg-[#7B4896] text-[#F7F7E6] rounded-t-xl h-[3rem] flex items-center px-10 '>
+                                <p>EF SET</p>
+                            </div>
+                            <div className='pr-5 font-bold'>
+                                <p>2023</p>
+                            </div>
+                        </div>
+                            
+                        <div className='px-2 py-5'>
+                            <div className=' pt-3 pb-3 text-[20px]  text-[#2B3033] font-bold'>
+                                <p>English Certificate</p>
+                            </div>
+                            <div className='pt-7 pb-4 font-semibold text-[#2B3033] text-[17px]'>
+                                <a href="EFSETCertificate.pdf" download>
+                                    <p className='bg-[#7B4896] rounded-xl text-center py-2 text-white hover:bg-[#b467dd]'>Download Certificate</p>
+                                </a>
+                            </div>
+                        </div>  
+                    </div>
+                </Atropos>
+            </div>
         </div>
     );
 };
