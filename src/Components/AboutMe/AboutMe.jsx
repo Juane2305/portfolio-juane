@@ -99,10 +99,10 @@ const AboutMe = () => {
             {/* VERSION DESKTOP */}
             <section id='certificationsDesktop' className='hidden  lg:flex justify-evenly w-full  text-[#2B3033] pt-20 flex-wrap'>
                 {certifications.map((item)=>(
-                    <Atropos className='my-atropos shadow-sm rounded-xl' shadow={false} highlight={false} key={item.id}>
+                    <Atropos className='my-atropos shadow-sm rounded-xl h-full' shadow={false} highlight={false} key={item.id}>
                     <div className='w-[30rem] bg-[#E8E8D8] rounded-xl h-full' key={item.id}>
-                        <div className='border-[#2B3033] border-2 text-[#2B3033] font-light flex justify-between items-center'>
-                            <div className='bg-[#7B4896] text-[#F7F7E6] h-[3rem] flex items-center px-10'>
+                        <div className='border-[#702d97] border-2 rounded-t-2xl text-[#2B3033] font-light flex justify-between items-center'>
+                            <div className='bg-[#7B4896] text-[#F7F7E6] rounded-t-xl h-[3rem] flex items-center px-10'>
                                 {item.school}
                             </div>
                             <div className='pr-5 font-bold'>
@@ -110,17 +110,17 @@ const AboutMe = () => {
                             </div>
                         </div>
                         
-                        <div>
+                        <div className='h-[22rem] flex flex-col justify-between'>
                                 <section >
-                                    <div className=' pt-3 pb-3 text-[20px]  text-[#2B3033] font-bold'>
+                                    <div className=' pt-3 pb-3 text-[20px]  text-[#2B3033] font-bold px-3'>
                                         {item.name}
                                     </div>
-                                    <div className='pt-7 pb-4 font-semibold text-[#2B3033] text-[17px]'>
+                                    <div className='pt-7 pb-4 font-semibold text-[#2B3033] text-[17px] px-3'>
                                         {item.description}
                                     </div>
                                 </section>
-                                <a href={item.pdf} download className=''>
-                                    <p className='bg-[#7e5c91] rounded-xl text-center py-2 my-3 text-white hover:bg-[#b467dd] '>Download Certificate</p>
+                                <a href={item.pdf} download className='px-10'>
+                                    <p className='bg-[#7B4896] rounded-xl text-center py-2 my-3 text-[#F7F7E6] hover:bg-[#b467dd] '>Download Certificate</p>
                                 </a>
                         </div>
                         
@@ -128,7 +128,7 @@ const AboutMe = () => {
                     </Atropos>
                 ))}
             </section>
-            <div className='flex justify-center'>
+            <div className=' justify-center hidden lg:flex'>
                 <Atropos className='my-atropos shadow-sm rounded-xl' shadow={false} highlight={false}>
                     <div className='w-[18rem]  sm:w-[25rem] bg-[#E8E8D8] rounded-xl shadow-2xl mt-24'>
                         <div className='border-[#702d97] border-2 rounded-t-2xl text-[#2B3033] font-light flex justify-between items-center'>
@@ -140,13 +140,13 @@ const AboutMe = () => {
                             </div>
                         </div>
                             
-                        <div className='px-2 py-5'>
-                            <div className=' pt-3 pb-3 text-[20px]  text-[#2B3033] font-bold'>
+                        <div className=' py-5 '>
+                            <div className=' pt-3 pb-3 text-[20px]  text-[#2B3033] font-bold px-3'>
                                 <p>English Certificate</p>
                             </div>
-                            <div className='pt-7 pb-4 font-semibold text-[#2B3033] text-[17px]'>
-                                <a href="EFSETCertificate.pdf" download>
-                                    <p className='bg-[#7B4896] rounded-xl text-center py-2 text-white hover:bg-[#b467dd]'>Download Certificate</p>
+                            <div className='pt-7 pb-4 font-semibold text-[#2B3033] text-[17px] px-10'>
+                                <a href="EFSETCertificate.pdf" download className=''>
+                                    <p className='bg-[#7B4896] rounded-xl text-center py-2 text-white hover:bg-[#b467dd] '>Download Certificate</p>
                                 </a>
                             </div>
                         </div>  
