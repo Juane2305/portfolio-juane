@@ -26,7 +26,7 @@ const Main = () => {
 
         {/* VERSION DESKTOP */}
         <div className="h-screen hidden md:flex bg-[url('https://res.cloudinary.com/dfschbyq2/image/upload/v1708548315/Abstract_Paper_1_qfzipb.svg')] bg-center bg-cover bg-fixed justify-center items-center">
-          <Atropos className="my-atropos w-[65rem] shadow-2xl">
+          <Atropos className="my-atropos w-[65rem] shadow-2xl" shadow={false}>
             <div className="flex justify-center items-center bg-[#E8E8D8]  rounded-2xl ">
               <img
                 src="https://res.cloudinary.com/dfschbyq2/image/upload/v1707361261/juane-_kbdkmx.png"

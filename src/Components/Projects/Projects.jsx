@@ -27,7 +27,7 @@ const Projects = () => {
     elizca:[
       {
         id: 1,
-        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1715143536/elizca1_qaot1j.png"
+        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1715801653/elizca2_wkmrfa.png"
       },
       {
         id: 2, 
@@ -100,7 +100,7 @@ const Projects = () => {
 
     return (
       <div className='bg-[#E8E8D8]'>
-        <h1 className='text-[4rem] pt-10 text-[#2B3033] font-bold text-center'>Some of my best projects</h1>
+        <h1 className='text-[4rem] pt-10 text-[#2B3033] font-bold text-center' data-aos="fade-right" data-aos-duration="2000">Some of my best projects</h1>
         <div className='w-full flex justify-center items-center bg-purple-400 mt-20 mb-5' data-aos="fade-up">
           <h2 id="projects" className="text-purple-950 font-black text-[30px] sm:text-[40px] text-center cursor-default z-20 py-3" >
             ELIZCA
@@ -119,9 +119,9 @@ const Projects = () => {
               {projects.elizca.map((elizca) => (
                 <CarouselItem key={elizca.id} className="flex justify-center">
                 <a href="https://www.elizca.com/" target='_blank'>
-                  <Card className="w-[60rem] border-none outline-none flex justify-center items-center">
-                      <CardContent className="flex flex-col lg:flex lg:flex-row items-center justify-start p-3 bg-gradient-to-tr from-[#0e0719] to-[#7f4ec7]  lg:h-[40rem] sm:h-[37rem] h-[30rem] gap-5 lg:gap-0 shadow-sombra-imagenes w-full">
-                        <img src={elizca.image} alt="" className="shadow-sombra-imagenes w-full h-full"/>
+                  <Card className=" xl:w-[60rem] border-none outline-none flex justify-center items-center">
+                      <CardContent className="flex flex-col lg:flex lg:flex-row items-center justify-start p-1 xl:p-3 bg-gradient-to-tr from-[#0e0719] to-[#7f4ec7] gap-5 lg:gap-0 shadow-sombra-imagenes w-full">
+                        <img src={elizca.image} alt="" className="shadow-sombra-imagenes xl:w-full xl:h-full"/>
                       </CardContent>
                   </Card>
               </a>
@@ -150,9 +150,9 @@ const Projects = () => {
               {projects.calicata.map((elizca) => (
                 <CarouselItem key={elizca.id} className="flex justify-center">
                 <a href="https://calicatatoursandtravel.tur.ar/" target='_blank'>
-                  <Card className="w-[60rem] border-none outline-none flex justify-center items-center">
-                      <CardContent className="flex flex-col lg:flex lg:flex-row items-center justify-start p-3 bg-gradient-to-tr from-[#505528] to-[#e2e181]  lg:h-[40rem] sm:h-[37rem] h-[30rem] gap-5 lg:gap-0 shadow-sombra-imagenes w-full">
-                        <img src={elizca.image} alt="" className="shadow-sombra-imagenes w-full h-full"/>
+                  <Card className="xl:w-[60rem] border-none outline-none flex justify-center items-center">
+                      <CardContent className="flex flex-col lg:flex lg:flex-row items-center justify-start p-1 xl:p-3 bg-gradient-to-tr from-[#505528] to-[#e2e181] gap-5 lg:gap-0 shadow-sombra-imagenes w-full">
+                        <img src={elizca.image} alt="" className="shadow-sombra-imagenes xl:w-full xl:h-full"/>
                       </CardContent>
                   </Card>
                 </a>
@@ -182,9 +182,9 @@ const Projects = () => {
               {projects.peseguros.map((elizca) => (
                 <CarouselItem key={elizca.id} className="flex justify-center">
                 <a href='https://pizzolatoelizondoseguros.com/' target='_blank'>
-                  <Card className="w-[60rem] border-none outline-none flex justify-center items-center">
-                      <CardContent className="flex flex-col lg:flex lg:flex-row items-center justify-start p-3 bg-gradient-to-tr from-[#1e1e41] to-[#122a77]  lg:h-[40rem] sm:h-[37rem] h-[30rem] gap-5 lg:gap-0 shadow-sombra-imagenes w-full">
-                        <img src={elizca.image} alt="" className="shadow-sombra-imagenes w-full h-full"/>
+                  <Card className="xl:w-[60rem] border-none outline-none flex justify-center items-center">
+                      <CardContent className="flex flex-col lg:flex lg:flex-row items-center justify-start p-1 xl:p-3 bg-gradient-to-tr from-[#1e1e41] to-[#122a77] gap-5 lg:gap-0 shadow-sombra-imagenes w-full">
+                        <img src={elizca.image} alt="" className="shadow-sombra-imagenes xl:w-full xl:h-full"/>
                       </CardContent>
                   </Card>
                 </a>

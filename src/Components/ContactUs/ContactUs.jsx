@@ -65,17 +65,16 @@ const ContactUs = () => {
 
     return (
       <div id='contact' className="h-full w-full bg-[#E8E8D8] py-24">
-        <h1 className='text-[2rem] lg:text-[4rem] pt-10 text-[#2B3033] font-bold text-center'>
+        <h1 className='text-[2rem] lg:text-[4rem] pt-10 text-[#2B3033] font-bold text-center'  data-aos="flip-right" data-aos-duration="2000">
           Contact
         </h1>
         {/* <img src={background} alt="" className='absolute right-0'/> */}
         <section className='flex justify-center items-center lg:pt-10 mx-5 sm:mx-0'>
-          <div className='z-10 hidden lg:w-[35rem] lg:flex lg:justify-center lg:items-center' data-aos="fade-up">
+          <div className='z-10 hidden lg:w-[35rem] lg:flex lg:justify-center lg:items-center' data-aos="fade-right">
             <img src="https://res.cloudinary.com/dreso9ye9/image/upload/v1703865403/contact2_y1f45t.png" alt="" className='z-10 w-[35rem]'/>
           </div>
           <div className="bg-white px-8 pb-8 rounded-lg shadow-lg max-w-sm lg:w-1/3 z-10" data-aos="fade-up">
             <div className="flex justify-center mb-6">
-              
             </div>
             <h2 className="text-2xl font-semibold text-center mb-5 cursor-default">
               Contact me
@@ -114,7 +113,7 @@ const ContactUs = () => {
                   onChange={handleChange}
                   className="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-purple-500"
                   required
-                  placeholder="a"
+                  placeholder="example@example.com"
                 />
               </div>
               <div className="mb-6">

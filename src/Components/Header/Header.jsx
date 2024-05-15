@@ -20,13 +20,13 @@ export default function HamburgerMenu() {
     };
   }, []);
 
-  const navClasses = `fixed py-4 z-20 w-full backdrop-filter transition-all duration-300 ${scrolled ? 'bg-[#252525]' : ''}`;
+  const navClasses = `fixed z-20 w-full backdrop-filter transition-all duration-300 ${scrolled ? 'bg-[#252525]' : ''}`;
   const hamburgerClass= `block h-1 w-8 animate-pulse rounded-lg bg-purple-800 ${scrolled ? 'bg-white' : ''}`
   const hamburgerClass2= `block h-1 w-8 animate-pulse rounded-lg bg-black ${scrolled ? 'bg-white' : ''}`
 
   return (
     <div className={navClasses}>
-      <nav>
+      <nav className="py-4">
         <section className="MOBILE-MENU flex justify-between items-center lg:hidden">
           <a href="#home">
             {scrolled ? <img className="lg:hidden w-[7rem] ml-4 mt-4" src="https://res.cloudinary.com/dfschbyq2/image/upload/v1715742979/JUANE-removebg-preview_2_gp4ulf.png" alt="logo"></img> : <img className="lg:hidden w-[7rem] ml-4 mt-2" src="https://res.cloudinary.com/dfschbyq2/image/upload/v1715742978/JUANE__1_-removebg-preview_lqqldh.png" alt="logo"></img>}
@@ -84,9 +84,10 @@ export default function HamburgerMenu() {
             <li className="transform hover:scale-105 duration-200">
               <a href="#about">Sobre mí</a>
             </li>
-            <li>
-              <h1 className="w-[12rem] lg:hidden text-white"> Logo</h1>
-            </li>
+            
+            <a href="#home">
+              <img className="hidden lg:block w-[7rem] ml-4 mt-4" src="https://res.cloudinary.com/dfschbyq2/image/upload/v1715742979/JUANE-removebg-preview_2_gp4ulf.png" alt="logo"></img> 
+            </a>
             <li className="transform hover:scale-105 duration-200">
               <a href="#services">Proyectos</a>
             </li>

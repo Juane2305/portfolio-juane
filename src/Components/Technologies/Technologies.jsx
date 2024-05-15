@@ -12,9 +12,9 @@ const Technologies = () => {
     return (
         <div className='flex justify-center' id='technologies'>
             <div className='pt-10 pb-24 bg-[#E8E8D8] w-full'>
-                <h1 className='text-[2rem] lg:text-[4rem] py-10  text-[#2B3033] font-bold text-center' data-aos="fade-down" data-aos-duration="2000">My knowledge</h1>
+                <h1 className='text-[2rem] lg:text-[4rem] py-10  text-[#2B3033] font-bold text-center' data-aos="fade-right" data-aos-duration="2000">My knowledge</h1>
                 <div className='flex lg:flex-col justify-center items-center px-10'>
-                    <div className='flex flex-col lg:flex-row justify-center items-center lg:gap-x-16 gap-y-10 lg:gap-y-0 lg:pt-16' data-aos="fade-up" data-aos-duration="2000"> 
+                    <div className='flex flex-col lg:flex-row justify-center items-center lg:gap-x-16 gap-y-10 lg:gap-y-0 lg:pt-16' data-aos="fade-down" data-aos-duration="2000"> 
                         <a className='transform hover:scale-110 duration-700' href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://res.cloudinary.com/dfschbyq2/image/upload/v1708547348/JavaScript-logo_p4fhwa.png" alt="javascript" width="85" height="85"/> </a>
                         <a className='transform hover:scale-110 duration-700' href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://res.cloudinary.com/dfschbyq2/image/upload/v1708547438/css-logo_pbvmya.png" alt="css3" width="60" height="60"/> </a>
                         <a className='transform hover:scale-110 duration-700' href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://res.cloudinary.com/dfschbyq2/image/upload/v1708547556/React-Logo-PNG-Pic_hyhu7k.png" alt="react" width="85" height="85"/> </a>
