@@ -3,13 +3,13 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import emailjs from '@emailjs/browser';
 import { useEffect } from 'react';
-// import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import Swal from 'sweetalert2';
 
 
 const ContactUs = () => {
 
-  // const { t, i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   useEffect(()=>{
     Aos.init({duration: 1000});
@@ -28,10 +28,8 @@ const ContactUs = () => {
     setData({...data, [event.target.name]: event.target.value })
   }
 
-  const messageSuccess = 'Your message has been successfully sent!'
-  const messageError = 'Your message could not be sent'
-  // const messageSuccess = i18n.language == 'en' ?  'Your message has been successfully sent!' : '¡Su consulta ha sido enviada con éxito!'
-  // const messageError = i18n.language == 'en' ?  'Your message could not be sent' : 'No se ha podido enviar su consulta'
+  const messageSuccess = i18n.language == 'en' ?  'Your message has been successfully sent!' : '¡Su consulta ha sido enviada con éxito!'
+  const messageError = i18n.language == 'en' ?  'Your message could not be sent' : 'No se ha podido enviar su consulta'
 
 
 
@@ -65,8 +63,8 @@ const ContactUs = () => {
 
     return (
       <div id='contact' className="h-full w-full bg-[#E8E8D8] py-24">
-        <h1 className='text-[2rem] lg:text-[4rem] pt-10 text-[#2B3033] font-bold text-center'  data-aos="flip-right" data-aos-duration="2000">
-          Contact
+        <h1 className='text-[2rem] lg:text-[4rem] pt-10 pb-10 lg:pb-0 text-[#2B3033] font-bold text-center'  data-aos="flip-right" data-aos-duration="2000">
+          {t("contact")}
         </h1>
         {/* <img src={background} alt="" className='absolute right-0'/> */}
         <section className='flex justify-center items-center lg:pt-10 mx-5 sm:mx-0'>
@@ -77,7 +75,7 @@ const ContactUs = () => {
             <div className="flex justify-center mb-6">
             </div>
             <h2 className="text-2xl font-semibold text-center mb-5 cursor-default">
-              Contact me
+              {t("contactMe")}
             </h2>
             <form ref={refForm} onSubmit={handleSubmit}>
               <div className="mb-4">
@@ -85,7 +83,7 @@ const ContactUs = () => {
                   htmlFor="username"
                   className="block text-gray-700 text-sm font-semibold mb-2"
                 >
-                  Name
+                  {t("name")}
                 </label>
                 <input
                   type="text"
@@ -95,7 +93,7 @@ const ContactUs = () => {
                   onChange={handleChange}
                   className="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-purple-500"
                   required
-                  placeholder="James Brown"
+                  placeholder={t("namePlaceholder")}
                 />
               </div>
               <div className="mb-4">
@@ -103,7 +101,7 @@ const ContactUs = () => {
                   htmlFor="email"
                   className="block text-gray-700 text-sm font-semibold mb-2"
                 >
-                  Email
+                  {t("email")}
                 </label>
                 <input
                   type="email"
@@ -113,7 +111,7 @@ const ContactUs = () => {
                   onChange={handleChange}
                   className="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-purple-500"
                   required
-                  placeholder="example@example.com"
+                  placeholder={t("emailPlaceholder")}
                 />
               </div>
               <div className="mb-6">
@@ -121,7 +119,7 @@ const ContactUs = () => {
                   htmlFor="message"
                   className="block text-gray-700 text-sm font-semibold mb-2"
                 >
-                  Message
+                  {t("message")}
                 </label>
                 <textarea
                   name='message'
@@ -129,6 +127,7 @@ const ContactUs = () => {
                   value={data.message}
                   onChange={handleChange}
                   className="form-input w-full p-2  border rounded-lg text-gray-700 focus:ring-purple-500"
+                  placeholder={t("messagePlaceholder")}
                   required
                 />
               </div>
@@ -136,7 +135,7 @@ const ContactUs = () => {
                 type="submit"
                 className="w-full bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 duration-300"
               >
-                Send message
+                {t("send")}
               </button>
             </form>
           </div>

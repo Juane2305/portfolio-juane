@@ -4,12 +4,18 @@ import { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Atropos from 'atropos/react';
+import { useTranslation } from 'react-i18next';
 
 const AboutMe = () => {
 
     useEffect(()=>{
         Aos.init({duration: 1000});
       },[])
+
+      const { t, i18n } = useTranslation()
+
+    const cert = <span>{t("certDeveloper")}</span>
+    const henry = <span>{t("henry")}</span>
 
     const certifications = [
         {
@@ -18,7 +24,7 @@ const AboutMe = () => {
             year: 2022,
             school: 'Digital House',
             pdf:'/DigitalHouse.pdf',
-            description: 'Graduated from the Certified Tech Developer program, a cutting-edge initiative created in collaboration by Globant and Mercado Libre, offered in partnership with Digital House. This comprehensive program spanned over 1500 hours of theoretical and practical instruction, providing a solid foundation in technology, development, and teamwork.'
+            description: cert
         },
         {
             id: 2,
@@ -26,17 +32,17 @@ const AboutMe = () => {
             year: 2023,
             school: 'Henry Bootcamp',
             pdf:'/HENRY.pdf',
-            description: 'Graduated as a Full Stack Web Developer from "Henry" bootcamp, having successfully completed the program within a period of 4 months, including collaborative projects in teams of up to 8 people.'
+            description: henry
         }
     ]
 
 
     return (
         <div className='bg-[#E8E8D8] bg-cover pb-32'>
-            <h1 className='text-[2rem] lg:text-[4rem] pt-10 text-[#2B3033] font-bold text-center' data-aos="fade-right" data-aos-duration="2000">Who am I?</h1>
+            <h1 className='text-[2rem] lg:text-[4rem] pt-10 text-[#2B3033] font-bold text-center' data-aos="fade-right" data-aos-duration="2000">{t("whoAmI")}</h1>
             <div className='flex justify-center lg:justify-evenly items-center pt-5 pb-10'>
                 <div className=' px-5 lg:w-[50%] flex items-center text-lg md:text-[25px] font-semibold text-[#2B3033]' data-aos="fade-right" data-aos-duration="2000">
-                    <p className='cursor-default'>Hey there! I'm Juan Emilio Elizondo, a full-stack developer based in Argentina, specializing in JavaScript (React and Node.js), PostgreSQL, HTML, CSS, and Tailwind CSS. Alongside a partner, I co-founded ELIZCA, where we craft diverse websites tailored to various needs. Let's collaborate and bring your web projects to life with <a href='https://www.elizca.com' target='_blank' className='text-[#7B4896] hover:underline'>ELIZCA!</a></p>
+                    <p className='cursor-default'>{t("whoAmIInfo")} <a href='https://www.elizca.com' target='_blank' className='text-[#7B4896] hover:underline'>ELIZCA!</a></p>
                 </div>
                 <div  data-aos="fade-left" data-aos-duration="2000">
                     <img src="https://res.cloudinary.com/dfschbyq2/image/upload/v1707365993/Group_12_1_t7rrh5.svg" alt="" className='hidden lg:block w-[22rem]'/>
@@ -68,7 +74,7 @@ const AboutMe = () => {
                                 {item.description}
                             </div>
                             <a href={item.pdf} download>
-                                <p className='bg-[#7e5c91] rounded-xl text-center py-2 my-3 text-white hover:bg-[#b467dd] '>Download Certificate</p>
+                                <p className='bg-[#7e5c91] rounded-xl text-center py-2 my-3 text-white hover:bg-[#b467dd] '>{t("download")}</p>
                             </a>
                         </div>
                     </div>
@@ -85,7 +91,7 @@ const AboutMe = () => {
                         
                     <div className='px-2 py-5 bg-gray-300'>
                         <div className=' pt-3 pb-3 text-[20px]  text-[#2B3033] font-bold'>
-                            <p>English Certificate</p>
+                            <p>{t("english")}</p>
                         </div>
                         <div className='pt-7 pb-4 font-semibold text-[#2B3033] text-[17px]'>
                             <a href="EFSETCertificate.pdf" download>
@@ -120,7 +126,7 @@ const AboutMe = () => {
                                     </div>
                                 </section>
                                 <a href={item.pdf} download className='px-10'>
-                                    <p className='bg-[#7B4896] text-center py-2 my-3 text-[#F7F7E6] hover:bg-[#b467dd] rounded-bl-xl rounded-tr-xl'>Download Certificate</p>
+                                    <p className='bg-[#7B4896] text-center py-2 my-3 text-[#F7F7E6] hover:bg-[#b467dd] rounded-bl-xl rounded-tr-xl'>{t("download")}</p>
                                 </a>
                         </div>
                         
@@ -142,11 +148,11 @@ const AboutMe = () => {
                             
                         <div className=' py-5 bg-gray-300 rounded-b-2xl'>
                             <div className=' pt-3 pb-3 text-[20px]  text-[#2B3033] font-bold px-3'>
-                                <p>English Certificate</p>
+                                <p>{t("english")}</p>
                             </div>
                             <div className='pt-7 pb-4 font-semibold text-[#2B3033] text-[17px] px-10'>
                                 <a href="EFSETCertificate.pdf" download className=''>
-                                    <p className='bg-[#7B4896] rounded-bl-xl rounded-tr-xl text-center py-2 text-white hover:bg-[#b467dd] '>Download Certificate</p>
+                                    <p className='bg-[#7B4896] rounded-bl-xl rounded-tr-xl text-center py-2 text-white hover:bg-[#b467dd] '>{t("download")}</p>
                                 </a>
                             </div>
                         </div>  

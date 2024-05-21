@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { useTranslation } from 'react-i18next';
 
 const Technologies = () => {
 
@@ -9,10 +10,13 @@ const Technologies = () => {
         Aos.init({duration: 1000});
       },[])
 
+    const { t, i18n } = useTranslation()
+
+
     return (
         <div className='flex justify-center' id='technologies'>
             <div className='pt-10 pb-24 bg-[#E8E8D8] w-full'>
-                <h1 className='text-[2rem] lg:text-[4rem] py-10  text-[#2B3033] font-bold text-center' data-aos="fade-right" data-aos-duration="2000">My knowledge</h1>
+                <h1 className='text-[2rem] lg:text-[3rem] py-10  text-[#2B3033] font-bold text-center' data-aos="fade-right" data-aos-duration="2000">{t("knowledge")}</h1>
                 <div className='flex lg:flex-col justify-center items-center px-10'>
                     <div className='flex flex-col lg:flex-row justify-center items-center lg:gap-x-16 gap-y-10 lg:gap-y-0 lg:pt-16' data-aos="fade-down" data-aos-duration="2000"> 
                         <a className='transform hover:scale-110 duration-700' href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://res.cloudinary.com/dfschbyq2/image/upload/v1708547348/JavaScript-logo_p4fhwa.png" alt="javascript" width="85" height="85"/> </a>
