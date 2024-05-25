@@ -20,7 +20,7 @@ const Projects = () => {
   const { t, i18n } = useTranslation()
 
   useEffect(()=>{
-    Aos.init({duration: 1000});
+    Aos.init({duration: 2500});
   },[])
 
   const projects = {
@@ -96,7 +96,7 @@ const Projects = () => {
 
     return (
       <div className='bg-[#E8E8D8]'>
-        <h1 className='text-[2rem] lg:text-[3rem] pt-10 text-[#2B3033] font-bold text-center' data-aos="fade-right" data-aos-duration="2000">{t("projects")}</h1>
+        <h1 className='text-[2rem] lg:text-[3rem] pt-10 text-[#2B3033] font-bold text-center' data-aos="fade-right">{t("projects")}</h1>
         <div className='w-full flex justify-center items-center bg-purple-400 mt-20 mb-5' data-aos="fade-up">
           <h2 id="projects" className="text-purple-950 font-black text-[30px] sm:text-[40px] text-center cursor-default z-20 py-3" >
             ELIZCA
@@ -105,7 +105,6 @@ const Projects = () => {
         <div data-aos="fade" id="elizca" className="px-16 lg:px-36 pt-10 flex flex-col justify-center items-center">
           <Carousel
           data-aos="flip-down"
-          data-aos-duration="2500"
           opts={{
               align: "start",
           }}
@@ -136,7 +135,6 @@ const Projects = () => {
         <div data-aos="fade" id="elizca" className="px-16 lg:px-36 pt-10 flex flex-col justify-center items-center">
           <Carousel
           data-aos="flip-down"
-          data-aos-duration="2500"
           opts={{
               align: "start",
           }}
@@ -168,7 +166,6 @@ const Projects = () => {
         <div data-aos="fade" id="elizca" className="px-16 lg:px-36 pt-10 flex flex-col justify-center items-center">
           <Carousel
           data-aos="flip-down"
-          data-aos-duration="2500"
           opts={{
               align: "start",
           }}
