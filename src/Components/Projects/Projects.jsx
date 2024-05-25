@@ -27,71 +27,67 @@ const Projects = () => {
     elizca:[
       {
         id: 1,
-        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1715801653/elizca2_wkmrfa.png"
+        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1716606470/elizca1_qaot1j_orov5f.jpg"
       },
       {
         id: 2, 
-        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1715143536/elizca2_okmqbx.png"
+        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1716606598/elizca2_okmqbx_ccnzqn.jpg"
       },
       {
         id: 4, 
-        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1715143536/elizca3_daazvh.png"
+        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1716606496/elizca3_daazvh_v4hkur.jpg"
       },
       {
         id: 5,
-        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1715143536/elizca4_kjzig9.png"
+        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1716606637/elizca4_kjzig9_wjwpoo.jpg"
       },
       {
         id: 6, 
-        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1715143536/elizca5_jhtpxf.png"
+        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1716606670/elizca5_jhtpxf_ppyrss.jpg"
       }
     ],
     calicata:[
       {
         id: 1,
-        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1715626074/calicata1_f7eaj4.png"
+        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1716606705/calicata1_f7eaj4_hv5bol.jpg"
       },
       {
         id: 2, 
-        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1715626074/calicata2_xlwkwh.png"
+        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1716606777/calicata2_xlwkwh_gnobbc.jpg"
       },
       {
         id: 3, 
-        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1715626074/calicata3_ulisyt.png"
+        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1716606792/calicata3_ulisyt_jg0cze.jpg"
       },
       {
         id: 4,
-        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1715626074/calicata5_g8gpwj.png"
+        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1716606812/calicata5_g8gpwj_m7qsaz.jpg"
       },
       {
         id: 5,
-        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1715626074/calicata4_diegh1.png"
-      },
-      {
-        id: 6,
-        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1715626236/calicata6_qytck2.png"
+        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1716606804/calicata4_diegh1_woc57u.jpg"
       }
     ],
     peseguros:[
       {
         id: 1,
-        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1715627516/pe1_t9sawl.png"
+        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1716606903/pe1_t9sawl_fdvdkw.jpg"
       },
       {
         id: 2, 
-        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1715627517/pe2_rxmhgo.png"
+        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1716606908/pe2_rxmhgo_ozgywj.jpg"
       },
       {
         id: 3, 
-        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1715627515/pe3_dw2d0w.png"
+        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1716606915/pe3_dw2d0w_aywedn.jpg"
       },
       {
         id: 4,
-        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1715627516/pe4_u6taqh.png"
+        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1716606922/pe4_u6taqh_s6unnl.jpg"
       },
       {
         id: 5,
-        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1715627516/pe5_iepsnu.png"
+        image: "https://res.cloudinary.com/dfschbyq2/image/upload/v1716606928/pe5_iepsnu_rmr7st.jpg"
       }
     ]
   }
@@ -100,7 +96,7 @@ const Projects = () => {
 
     return (
       <div className='bg-[#E8E8D8]'>
-        <h1 className='text-[3rem] pt-10 text-[#2B3033] font-bold text-center' data-aos="fade-right" data-aos-duration="2000">{t("projects")}</h1>
+        <h1 className='text-[2rem] lg:text-[3rem] pt-10 text-[#2B3033] font-bold text-center' data-aos="fade-right" data-aos-duration="2000">{t("projects")}</h1>
         <div className='w-full flex justify-center items-center bg-purple-400 mt-20 mb-5' data-aos="fade-up">
           <h2 id="projects" className="text-purple-950 font-black text-[30px] sm:text-[40px] text-center cursor-default z-20 py-3" >
             ELIZCA

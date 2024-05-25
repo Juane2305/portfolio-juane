@@ -39,7 +39,7 @@ const AboutMe = () => {
 
     return (
         <div className='bg-[#E8E8D8] bg-cover pb-32'>
-            <h1 className='text-[2rem] lg:text-[4rem] pt-10 text-[#2B3033] font-bold text-center' data-aos="fade-right" data-aos-duration="2000">{t("whoAmI")}</h1>
+            <h1 className='text-[2rem] lg:text-[3rem] pt-10 text-[#2B3033] font-bold text-center' data-aos="fade-right" data-aos-duration="2000">{t("whoAmI")}</h1>
             <div className='flex justify-center lg:justify-evenly items-center pt-5 pb-10'>
                 <div className=' px-5 lg:w-[50%] flex items-center text-lg md:text-[25px] font-semibold text-[#2B3033]' data-aos="fade-right" data-aos-duration="2000">
                     <p className='cursor-default'>{t("whoAmIInfo")} <a href='https://www.elizca.com' target='_blank' className='text-[#7B4896] hover:underline'>ELIZCA!</a></p>
@@ -95,7 +95,7 @@ const AboutMe = () => {
                         </div>
                         <div className='pt-7 pb-4 font-semibold text-[#2B3033] text-[17px]'>
                             <a href="EFSETCertificate.pdf" download>
-                                <p className='bg-[#7B4896] rounded-xl text-center py-2 text-white hover:bg-[#b467dd]'>Download Certificate</p>
+                                <p className='bg-[#7e5c91] rounded-xl text-center py-2 text-white hover:bg-[#b467dd]'>{t("download")}</p>
                             </a>
                         </div>
                     </div>  
