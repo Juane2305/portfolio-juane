@@ -12,7 +12,7 @@ const ContactUs = () => {
   const { t, i18n } = useTranslation()
 
   useEffect(()=>{
-    Aos.init({duration: 1000});
+    Aos.init();
   },[])
 
   const [data, setData] = useState({
@@ -68,10 +68,10 @@ const ContactUs = () => {
         </h1>
         {/* <img src={background} alt="" className='absolute right-0'/> */}
         <section className='flex justify-center items-center lg:pt-10 mx-5 sm:mx-0'>
-          <div className='z-10 hidden lg:w-[35rem] lg:flex lg:justify-center lg:items-center' data-aos="fade-right">
+          <div className='z-10 hidden lg:w-[35rem] lg:flex lg:justify-center lg:items-center' data-aos="fade-right" data-aos-duration="2000">
             <img src="https://res.cloudinary.com/dreso9ye9/image/upload/v1703865403/contact2_y1f45t.png" alt="" className='z-10 w-[35rem]'/>
           </div>
-          <div className="bg-white px-8 pb-8 rounded-lg shadow-lg max-w-sm lg:w-1/3 z-10" data-aos="fade-up">
+          <div className="bg-white px-8 pb-8 rounded-lg shadow-lg max-w-sm lg:w-1/3 z-10" data-aos="fade-up" data-aos-duration="2000">
             <div className="flex justify-center mb-6">
             </div>
             <h2 className="text-2xl font-semibold text-center mb-5 cursor-default">

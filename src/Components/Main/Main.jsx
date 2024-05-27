@@ -8,9 +8,9 @@ const Main = () => {
   const { t, i18n } = useTranslation()
 
   return (
-      <div>
+      <div id='home'>
         {/* VERSION MOBILE */}
-        <div className="h-screen lg:hidden w-full flex bg-[url('https://res.cloudinary.com/dfschbyq2/image/upload/v1715740804/Abstract_Paper_3_1_oavp5t.jpg')] lg:bg-[url('https://res.cloudinary.com/dfschbyq2/image/upload/v1708548315/Abstract_Paper_1_qfzipb.svg')] bg-center bg-cover bg-fixed justify-center items-center">
+        <div className="h-screen lg:hidden w-full flex bg-[url('https://res.cloudinary.com/dfschbyq2/image/upload/v1715740804/Abstract_Paper_3_1_oavp5t.jpg')] lg:bg-[url('https://res.cloudinary.com/dfschbyq2/image/upload/v1708548315/Abstract_Paper_1_qfzipb.svg')] bg-center bg-cover bg-fixed justify-center items-center" >
             <div className="flex flex-col justify-center items-center bg-[#E8E8D8]  rounded-2xl w-[85%] sm:w-[22rem]">
               <img
                 src="https://res.cloudinary.com/dfschbyq2/image/upload/v1716607155/juane-_wqsnr3.png"

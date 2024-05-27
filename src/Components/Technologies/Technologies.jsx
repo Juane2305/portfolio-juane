@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 const Technologies = () => {
 
     useEffect(()=>{
-        Aos.init({duration: 1000});
+        Aos.init();
       },[])
 
     const { t, i18n } = useTranslation()

@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next';
 const AboutMe = () => {
 
     useEffect(()=>{
-        Aos.init({duration: 1000});
+        Aos.init();
       },[])
 
       const { t, i18n } = useTranslation()
@@ -38,7 +38,7 @@ const AboutMe = () => {
 
 
     return (
-        <div className='bg-[#E8E8D8] bg-cover pb-32'>
+        <div className='bg-[#E8E8D8] bg-cover pb-32' id='about'>
             <h1 className='text-[2rem] lg:text-[3rem] pt-10 text-[#2B3033] font-bold text-center' data-aos="fade-right" data-aos-duration="2000">{t("whoAmI")}</h1>
             <div className='flex justify-center lg:justify-evenly items-center pt-5 pb-10'>
                 <div className=' px-5 lg:w-[50%] flex items-center text-lg md:text-[25px] font-semibold text-[#2B3033]' data-aos="fade-right" data-aos-duration="2000">

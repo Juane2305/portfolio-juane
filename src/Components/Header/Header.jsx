@@ -30,7 +30,7 @@ export default function HamburgerMenu() {
     <div className='fixed z-20 w-full backdrop-filter transition-all duration-300 bg-[#252525]'>
       <nav className="py-4 lg:py-0 w-full">
         <section className="MOBILE-MENU flex justify-between items-center lg:hidden">
-          <a href="#home">
+          <a href="#homee">
             <img className="lg:hidden w-[7rem] ml-4 mt-4" src="https://res.cloudinary.com/dfschbyq2/image/upload/v1715742979/JUANE-removebg-preview_2_gp4ulf.png" alt="logo"></img> 
             
           </a>
@@ -69,7 +69,7 @@ export default function HamburgerMenu() {
                 <a href="#about"onClick={() => setIsNavOpen(false)}>{t("about")}</a>
               </li>
               <li className="border-b border-gray-400 my-8 uppercase">
-                <a href="#services"onClick={() => setIsNavOpen(false)}>{t("projectsHeader")}</a>
+                <a href="#projects"onClick={() => setIsNavOpen(false)}>{t("projectsHeader")}</a>
               </li>
               <li className="border-b border-gray-400 my-8 uppercase">
                 <a href="#contact"onClick={() => setIsNavOpen(false)}>{t("contact")}</a>
@@ -92,7 +92,7 @@ export default function HamburgerMenu() {
               <img className="hidden lg:block w-[7rem] ml-4 mt-4" src="https://res.cloudinary.com/dfschbyq2/image/upload/v1715742979/JUANE-removebg-preview_2_gp4ulf.png" alt="logo"></img> 
             </a>
             <li className="transform hover:scale-105 duration-200">
-              <a href="#services">{t("projectsHeader")}</a>
+              <a href="#projects">{t("projectsHeader")}</a>
             </li>
             <li className="transform hover:scale-105 duration-200">
               <a href="#contact">{t("contact")}</a>
