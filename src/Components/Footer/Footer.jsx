@@ -1,35 +1,88 @@
-import { useTranslation } from 'react-i18next';
+// src/Components/Footer/Footer.jsx
+import React from "react";
+import { FaGithub, FaLinkedin, FaEnvelope, FaArrowUp } from "react-icons/fa";
 
+const Footer = ({ language }) => {
+  // Función para volver arriba suavemente
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
-const Footer = () => {
-
-    const { t, i18n } = useTranslation()
-    
+  // Textos en español o inglés
+  const developedWithText =
+    language === "es"
+      ? "Desarrollado con"
+      : "Developed with";
+  const andText =
+    language === "es"
+      ? "y"
+      : "and";
+  const rightsText =
+    language === "es"
+      ? "Todos los derechos reservados."
+      : "All rights reserved.";
+  const backToTopText =
+    language === "es"
+      ? "Volver arriba"
+      : "Back to top";
 
   return (
-    <footer className="bg-[#2d1b52] pt-10">
-        <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-            <div className="sm:flex sm:items-center sm:justify-center">
-                <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-[#f7f7e6] sm:mb-0 dark:text-[#f7f7e6]">
-                    <li>
-                        <a href="#home" className="hover:underline me-4 md:me-6">{t("home")}</a>
-                    </li>
-                    <li>
-                        <a href="#about" className="hover:underline me-4 md:me-6">{t("about")}</a>
-                    </li>
-                    <li>
-                        <a href="#technologies" className="hover:underline me-4 md:me-6">{t("projectsHeader")}</a>
-                    </li>
-                    <li>
-                        <a href="#contact" className="hover:underline">{t("contactMe")}</a>
-                    </li>
-                </ul>
-            </div>
-            <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-            <span className="block text-sm text-[#f7f7e6] sm:text-center dark:text-gray-400">© 2024 <a href="https://flowbite.com/" className="hover:underline">Juan Emilio Elizondo</a>. All rights reserved.</span>
-        </div>
-    </footer>
-  )
-}
+    <footer className="bg-gray-900 text-white pt-12 pb-6 relative">
+      <div className="container mx-auto px-4 flex flex-col items-center space-y-4">
+        {/* Texto 'Desarrollado con React y Tailwind CSS' */}
+        <p className="text-sm text-gray-400 text-center">
+          {developedWithText} <span className="text-blue-500 font-semibold">React</span> {andText}{" "}
+          <span className="text-blue-500 font-semibold">Tailwind CSS</span>.
+        </p>
 
-export default Footer
+        {/* Línea divisoria */}
+        <div className="border-t border-gray-700 w-full" />
+
+        {/* Sección de íconos + copyright + botón */}
+        <div className="flex flex-col items-center space-y-4">
+          {/* Íconos */}
+          <div className="flex space-x-6 text-xl">
+            <a
+              href="mailto:juane.elizondo23@gmail.com"
+              className="hover:text-gray-300 transition"
+            >
+              <FaEnvelope />
+            </a>
+            <a
+              href="https://github.com/Juane2305"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-300 transition"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/juan-emilio-elizondo/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-300 transition"
+            >
+              <FaLinkedin />
+            </a>
+          </div>
+
+          {/* Copyright */}
+          <p className="text-sm text-gray-400 text-center">
+            © {new Date().getFullYear()} Juane. {rightsText}
+          </p>
+
+          {/* Botón para volver arriba */}
+          <button
+            onClick={scrollToTop}
+            className="text-gray-400 hover:text-gray-200 transition text-sm flex items-center space-x-2"
+          >
+            <FaArrowUp />
+            <span>{backToTopText}</span>
+          </button>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

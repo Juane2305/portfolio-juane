@@ -1,56 +1,152 @@
-import Atropos from 'atropos/react';
-import { FaLinkedin, FaGithub } from "react-icons/fa6";
-import { useTranslation } from 'react-i18next';
+// src/Components/Main/Main.jsx
+import React, { useCallback } from "react";
+import { motion } from "framer-motion";
+import Typewriter from "typewriter-effect";
+import CountUp from "react-countup";
 
+// Recibimos 'language' y 'darkMode' como props
+const Main = ({ language, darkMode }) => {
+  // Textos en ambos idiomas
+  const heroTitle = language === "es" ? "¡Hola! Soy Juane." : "Hi! I'm Juane.";
+  const devText = "SOFTWARE DEVELOPER";
 
-const Main = () => {
+  const typedStringsES = [
+    "Apasionado por la Tecnología",
+    "Creando Soluciones Innovadoras",
+    "Siempre Aprendiendo",
+  ];
+  const typedStringsEN = [
+    "Passionate about Technology",
+    "Creating Innovative Solutions",
+    "Always Learning",
+  ];
+  const typedStrings = language === "es" ? typedStringsES : typedStringsEN;
 
-  const { t, i18n } = useTranslation()
+  const description =
+    language === "es"
+      ? "Bienvenido a mi portfolio. Aquí encontrarás mis proyectos, certificaciones y conocimientos."
+      : "Welcome to my portfolio. Here you'll find my projects, certifications, and knowledge.";
+
+  const ctaText = language === "es" ? "Ver Proyectos" : "View Projects";
+
+  // Estadísticas en ambos idiomas, solo 4, con el signo "+"
+  const statsES = [
+    { value: 2, label: "Años de experiencia" },
+    { value: 5, label: "Certificaciones", prefix: "+" },
+    { value: 15, label: "Proyectos desarrollados", prefix: "+" },
+    { value: 500, label: "Commits en GitHub", prefix: "+" },
+  ];
+  const statsEN = [
+    { value: 2, label: "Years of experience" },
+    { value: 5, label: "Certifications", prefix: "+" },
+    { value: 15, label: "Developed projects", prefix: "+" },
+    { value: 500, label: "Commits on GitHub", prefix: "+" },
+  ];
+  const stats = language === "es" ? statsES : statsEN;
 
   return (
-      <div id='home'>
-        {/* VERSION MOBILE */}
-        <div className="h-screen lg:hidden w-full flex bg-[url('https://res.cloudinary.com/dfschbyq2/image/upload/v1715740804/Abstract_Paper_3_1_oavp5t.jpg')] lg:bg-[url('https://res.cloudinary.com/dfschbyq2/image/upload/v1708548315/Abstract_Paper_1_qfzipb.svg')] bg-center bg-cover bg-fixed justify-center items-center" >
-            <div className="flex flex-col justify-center items-center bg-[#E8E8D8]  rounded-2xl w-[85%] sm:w-[22rem]">
-              <img
-                src="https://res.cloudinary.com/dfschbyq2/image/upload/v1716607155/juane-_wqsnr3.png"
-                alt=""
-                className="w-[15rem] pb-5"
-              />
-              <div className="flex flex-col justify-center items-center  text-center font-bold pb-5">
-                <h1 id='title' className='text-[#2B3033] text-[2rem]'>{t("mainText")}</h1>
-                <h2 className="text-[#4D3E6B] text-[2rem]">{t("developerText")}</h2>
-                <div className='flex space-x-5 pt-5'>
-                  <a href="https://www.linkedin.com/in/juan-emilio-elizondo/" target='_blank'><FaLinkedin className='transform hover:scale-110 duration-700 text-[3rem]'/></a>
-                  <a href="https://github.com/Juane2305" target='_blank'><FaGithub className='transform hover:scale-110 duration-700 text-[3rem]'/></a>
-                </div>
-              </div>
-            </div>
-        </div>
+    <section
+      className={`relative flex items-center justify-center h-screen overflow-hidden ${
+        darkMode ? "bg-gray-900" : "bg-white"
+      }`}
+    >
 
+      {/* No se utiliza overlay ya que se adapta al fondo */}
+      
+      {/* Contenido principal */}
+      <div className="pt-10 md:pt-0 relative z-10 text-center px-4 max-w-3xl">
+        {/* Título principal */}
+        <motion.h1
+          className={`text-4xl md:text-6xl font-bold ${
+            darkMode ? "text-white" : "text-gray-900"
+          }`}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
+          {heroTitle}
+        </motion.h1>
+        <motion.h2
+          className="text-3xl md:text-5xl font-extrabold text-blue-600 mt-2 mb-5"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+        >
+          {devText}
+        </motion.h2>
 
-        {/* VERSION DESKTOP */}
-        <div className="h-screen hidden lg:flex bg-[url('https://res.cloudinary.com/dfschbyq2/image/upload/v1708548315/Abstract_Paper_1_qfzipb.svg')] bg-center bg-cover bg-fixed justify-center items-center">
-          <Atropos className="my-atropos w-[65rem] shadow-2xl" shadow={false}>
-            <div className="flex justify-center items-center bg-[#E8E8D8]  rounded-2xl ">
-              <img
-                src="https://res.cloudinary.com/dfschbyq2/image/upload/v1716607155/juane-_wqsnr3.png"
-                alt=""
-                className="w-[30rem]"
-              />
-              <div className="flex flex-col justify-center items-center text-[3rem] font-bold pr">
-                <h1 id='title' className='text-[#2B3033]'>{t("mainText")}</h1>
-                <h2 className="text-[#4D3E6B]">{t("developerText")}</h2>
-                <div className='flex space-x-5 pt-5'>
-                  <a href="https://www.linkedin.com/in/juan-emilio-elizondo/" target='_blank'><FaLinkedin className='transform hover:scale-110 duration-700'/></a>
-                  <a href="https://github.com/Juane2305" target='_blank'><FaGithub className='transform hover:scale-110 duration-700'/></a>
-                </div>
-              </div>
+        {/* Texto con efecto typewriter */}
+        <motion.div
+          className={`mt-6 text-2xl md:text-3xl font-semibold min-h-[4rem] ${
+            darkMode ? "text-white" : "text-gray-900"
+          }`}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 1, ease: "easeOut" }}
+        >
+          <Typewriter
+            options={{
+              strings: typedStrings,
+              autoStart: true,
+              loop: true,
+              delay: 40,
+              deleteSpeed: 30,
+            }}
+          />
+        </motion.div>
+
+        {/* Descripción */}
+        <motion.p
+          className={`mt-6 text-lg md:text-xl ${
+            darkMode ? "text-gray-400" : "text-gray-600"
+          }`}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 1, ease: "easeOut" }}
+        >
+          {description}
+        </motion.p>
+
+        {/* Botón de CTA */}
+        <motion.a
+          href="#projects"
+          className="inline-block mt-8 px-6 py-3 text-lg font-bold bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.5, duration: 1 }}
+        >
+          {ctaText}
+        </motion.a>
+
+        {/* Sección de estadísticas */}
+        <motion.div
+          className="mt-12 flex flex-wrap items-center justify-center gap-8"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 2, duration: 1, ease: "easeOut" }}
+        >
+          {stats.map((item) => (
+            <div key={item.label} className="text-center">
+              <span
+                className={`text-3xl font-bold ${
+                  darkMode ? "text-white" : "text-gray-900"
+                }`}
+              >
+                <CountUp end={item.value} duration={2} delay={3} prefix={item.prefix} />
+              </span>
+              <p
+                className={`text-sm md:text-base ${
+                  darkMode ? "text-gray-400" : "text-gray-600"
+                }`}
+              >
+                {item.label}
+              </p>
             </div>
-          </Atropos>
-        </div>
+          ))}
+        </motion.div>
       </div>
-    );
+    </section>
+  );
 };
 
 export default Main;
