@@ -1,12 +1,10 @@
-// src/Components/Main/Main.jsx
-import React, { useCallback } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import CountUp from "react-countup";
+import nameDecoration from "../../assets/nameDecoration.gif";
 
-// Recibimos 'language' y 'darkMode' como props
 const Main = ({ language, darkMode }) => {
-  // Textos en ambos idiomas
   const heroTitle = language === "es" ? "¡Hola! Soy Juane." : "Hi! I'm Juane.";
   const devText = "SOFTWARE DEVELOPER";
 
@@ -29,7 +27,6 @@ const Main = ({ language, darkMode }) => {
 
   const ctaText = language === "es" ? "Ver Proyectos" : "View Projects";
 
-  // Estadísticas en ambos idiomas, solo 4, con el signo "+"
   const statsES = [
     { value: 2, label: "Años de experiencia" },
     { value: 5, label: "Certificaciones", prefix: "+" },
@@ -44,28 +41,36 @@ const Main = ({ language, darkMode }) => {
   ];
   const stats = language === "es" ? statsES : statsEN;
 
+  const [gifKey, setGifKey] = useState(Date.now());
+
+  useEffect(() => {
+    setGifKey(Date.now());
+  }, []);
+
   return (
     <section
       className={`relative flex items-center justify-center h-screen overflow-hidden ${
         darkMode ? "bg-gray-900" : "bg-white"
       }`}
     >
-
-      {/* No se utiliza overlay ya que se adapta al fondo */}
-      
-      {/* Contenido principal */}
       <div className="pt-10 md:pt-0 relative z-10 text-center px-4 max-w-3xl">
-        {/* Título principal */}
-        <motion.h1
-          className={`text-4xl md:text-6xl font-bold ${
-            darkMode ? "text-white" : "text-gray-900"
-          }`}
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-        >
-          {heroTitle}
-        </motion.h1>
+        <div className="relative inline-block">
+          <img
+            src={`${nameDecoration}?t=${gifKey}`}
+            alt="impact gif"
+            className="absolute -top-16 md:-top-20 -right-10 md:-right-16 w-24 md:w-32 pointer-events-none"
+          />
+          <motion.h1
+            className={`text-4xl md:text-6xl font-bold ${
+              darkMode ? "text-white" : "text-gray-900"
+            }`}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
+            {heroTitle}
+          </motion.h1>
+        </div>
         <motion.h2
           className="text-3xl md:text-5xl font-extrabold text-blue-600 mt-2 mb-5"
           initial={{ opacity: 0, y: 50 }}
@@ -132,7 +137,12 @@ const Main = ({ language, darkMode }) => {
                   darkMode ? "text-white" : "text-gray-900"
                 }`}
               >
-                <CountUp end={item.value} duration={2} delay={3} prefix={item.prefix} />
+                <CountUp
+                  end={item.value}
+                  duration={2}
+                  delay={3}
+                  prefix={item.prefix}
+                />
               </span>
               <p
                 className={`text-sm md:text-base ${

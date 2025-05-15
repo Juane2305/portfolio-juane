@@ -1,5 +1,3 @@
-// src/Components/Projects/Projects.jsx
-import React from 'react';
 import { motion } from 'framer-motion';
 import { FiEye } from 'react-icons/fi';
 import { FaGithub } from 'react-icons/fa';
@@ -12,7 +10,7 @@ const projectData = [
       'Plataforma para crear invitaciones digitales y gestionar eventos con pasarela de pago integrada. Proyecto Real.',
     description_en:
       'Platform for creating digital invitations and managing events with an integrated payment gateway. Real project.',
-    technologies: ['React', 'Tailwind CSS', 'Java (Spring)', 'MySQL'],
+    technologies: ['React', 'Tailwind CSS', 'Java', 'Springboot' , 'MySQL'],
     image:
       'https://res.cloudinary.com/dfschbyq2/image/upload/v1743012024/84b522fe-73ac-46ab-acc8-ccb317537989.png',
     demoLink: 'https://invitarly.com',
@@ -54,7 +52,7 @@ const projectData = [
     technologies: ['React', 'Tailwind CSS'],
     image:
       'https://res.cloudinary.com/dfschbyq2/image/upload/v1743031287/52abf364-4081-4a27-a6bc-6d0a2cdd9231.png',
-    demoLink: 'https://black-gym-hazel.vercel.app/',
+    demoLink: 'https://blackgymdz.com/',
     repoLink: 'https://github.com/Juane2305/black_gym',
   },
   {
@@ -89,6 +87,25 @@ const Projects = ({ language, darkMode }) => {
   const heading =
     language === 'es' ? 'Proyectos más recientes' : 'Recent Projects';
 
+  const containerVariants = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.95, y: 40 },
+    show: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
     <section
       id="projects"
@@ -99,27 +116,29 @@ const Projects = ({ language, darkMode }) => {
           className={`text-3xl md:text-4xl font-bold text-center mb-8 ${
             darkMode ? "text-white" : "text-gray-800"
           }`}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, scale: 0.95, y: 40 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
           {heading}
         </motion.h2>
 
         {/* Grid de tarjetas */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {projectData.map((project) => (
             <motion.div
               key={project.id}
               className={`rounded-lg shadow-lg overflow-hidden flex flex-col ${
                 darkMode ? "bg-gray-800" : "bg-gray-50"
               }`}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              whileHover={{ scale: 1.02 }}
+              variants={cardVariants}
             >
               {/* Imagen del proyecto */}
               <img
@@ -185,7 +204,7 @@ const Projects = ({ language, darkMode }) => {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

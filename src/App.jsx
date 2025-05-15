@@ -5,7 +5,7 @@ import WhatsappButton from './Components/WhatsappButton/WhatsappButton';
 
 const App = () => {
   return (
-    <div>
+    <div className='overflow-hidden'>
       <Home/>
       <WhatsappButton/>
     </div>
