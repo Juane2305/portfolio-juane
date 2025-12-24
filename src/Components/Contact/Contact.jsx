@@ -1,35 +1,30 @@
-// src/Components/Contact/Contact.jsx
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import emailjs from '@emailjs/browser';
+import { FaEnvelope, FaUser, FaComment, FaPaperPlane, FaCheckCircle } from 'react-icons/fa';
 
-const Contact = ({ language, darkMode }) => {
+const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
-    username: "",
-    email: "",
-    message: "",
+    username: '',
+    email: '',
+    message: '',
   });
-  // Estados para loader y mensaje de éxito
   const [isLoading, setIsLoading] = useState(false);
   const [isSent, setIsSent] = useState(false);
+  const [error, setError] = useState('');
 
-  // Variables de texto según idioma
-  const titleText = language === "es" ? "Contáctame" : "Contact Me";
-  const subtitleText =
-    language === "es"
-      ? "Si tienes alguna pregunta, propuesta, o si necesitas hablar, no dudes en escribirme."
-      : "If you have any questions, proposals, or need to talk, don't hesitate to write to me.";
-
-  // Maneja los cambios en cada input/textarea
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    setError('');
   };
 
-  // Envía el formulario a EmailJS
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
     setIsSent(false);
+    setError('');
 
     const templateParams = {
       from_name: formData.username,
@@ -39,194 +34,209 @@ const Contact = ({ language, darkMode }) => {
 
     emailjs
       .send(
-        "service_envrsj9", // Reemplaza con tu Service ID
-        "template_ioq3qen", // Reemplaza con tu Template ID
+        'service_envrsj9',
+        'template_ioq3qen',
         templateParams,
-        "i9JqoBg9vA0X6dC52" // Reemplaza con tu Public Key
+        'i9JqoBg9vA0X6dC52'
       )
-      .then((result) => {
+      .then(() => {
         setIsLoading(false);
         setIsSent(true);
-        setFormData({ username: "", email: "", message: "" });
+        setFormData({ username: '', email: '', message: '' });
+        setTimeout(() => setIsSent(false), 5000);
       })
       .catch((error) => {
-        console.error("Error al enviar el mensaje:", error);
-        alert(
-          language === "es"
-            ? "Hubo un error al enviar el mensaje, inténtalo de nuevo."
-            : "There was an error sending your message, please try again."
-        );
+        console.error('Error al enviar el mensaje:', error);
+        setError(t('contact.form.error'));
         setIsLoading(false);
       });
   };
 
   return (
-    <section
-      id="contact"
-      className={`py-16 ${darkMode ? "bg-gray-800" : "bg-gray-100"}`}
-    >
-      <div className="container mx-auto px-4">
-        {/* Título */}
-        <motion.h2
-          className={`text-3xl md:text-4xl font-bold text-center mb-2 ${
-            darkMode ? "text-white" : "text-gray-800"
-          }`}
-          initial={{ opacity: 0, y: 30 }}
+    <section id="contact" className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 relative overflow-hidden">
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzR2Mi1oMnYtMmgtMnptMC00aDJ2MmgtMnYtMnptMCA0aDJ2MmgtMnYtMnoiLz48L2c+PC9nPjwvc3ZnPg==')]"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
+          className="max-w-5xl mx-auto"
         >
-          {titleText}
-        </motion.h2>
-        {/* Subtítulo */}
-        <motion.p
-          className={`text-center mb-8 ${
-            darkMode ? "text-gray-300" : "text-gray-600"
-          }`}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-        >
-          {subtitleText}
-        </motion.p>
-
-        {/* Formulario */}
-        <motion.form
-          className={`max-w-xl mx-auto p-6 rounded-lg shadow relative transition-all ${
-            darkMode ? "bg-gray-700" : "bg-white"
-          }`}
-          onSubmit={handleSubmit}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          {/* Campo: username (Nombre) */}
-          <div className="mb-4">
-            <label
-              htmlFor="username"
-              className={`block font-semibold mb-1 ${
-                darkMode ? "text-gray-200" : "text-gray-700"
-              }`}
+          <div className="text-center mb-16">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="text-4xl md:text-5xl font-bold text-white mb-4"
             >
-              {language === "es" ? "Nombre" : "Name"}
-            </label>
-            <input
-              type="text"
-              id="username"
-              name="username"
-              value={formData.username}
-              onChange={handleChange}
-              required
-              className={`text-gray-800 bg-white border-gray-300 w-full border rounded-md p-2 focus:outline-none transition duration-300 ${
-                darkMode
-                  ? " focus:border-blue-400"
-                  : "  focus:border-blue-500"
-              }`}
+              {t('contact.title')}
+            </motion.h2>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mb-6"
             />
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6, duration: 0.6 }}
+              className="text-xl text-gray-300 mb-2"
+            >
+              {t('contact.subtitle')}
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.7, duration: 0.6 }}
+              className="text-lg text-gray-400"
+            >
+              {t('contact.description')}
+            </motion.p>
           </div>
 
-          {/* Campo: email */}
-          <div className="mb-4">
-            <label
-              htmlFor="email"
-              className={`block font-semibold mb-1 ${
-                darkMode ? "text-gray-200" : "text-gray-700"
-              }`}
+          <div className="grid md:grid-cols-2 gap-8 items-start">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              className="space-y-6"
             >
-              {language === "es" ? "Correo" : "Email"}
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className={`text-gray-800 bg-white border-gray-300 w-full border rounded-md p-2 focus:outline-none transition duration-300 ${
-                darkMode
-                  ? " focus:border-blue-400"
-                  : "  focus:border-blue-500"
-              }`}
-            />
-          </div>
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-6">{t('contact.whyWorkWithMe')}</h3>
+                <div className="space-y-4">
+                  {t('contact.benefits', { returnObjects: true }).map((item, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.6 + index * 0.1 }}
+                      className="flex items-center gap-3 text-gray-200"
+                    >
+                      <span className="text-lg">{item}</span>
+                    </motion.div>
+                  ))}
+                </div>
 
-          {/* Campo: message */}
-          <div className="mb-4">
-            <label
-              htmlFor="message"
-              className={`block font-semibold mb-1 ${
-                darkMode ? "text-gray-200" : "text-gray-700"
-              }`}
+                <div className="mt-8 pt-6 border-t border-white/20">
+                  <p className="text-gray-300 mb-4">📧 juane.elizondo23@gmail.com</p>
+                  <p className="text-gray-300">📍 Argentina</p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4, duration: 0.8 }}
             >
-              {language === "es" ? "Mensaje" : "Message"}
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              className={`text-gray-800 bg-white border-gray-300 w-full border rounded-md p-2 focus:outline-none transition duration-300 ${
-                darkMode
-                  ? " focus:border-blue-400"
-                  : "  focus:border-blue-500"
-              }`}
-            />
+              <form onSubmit={handleSubmit} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                {isSent && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="mb-6 p-4 bg-green-500/20 border border-green-500 rounded-lg flex items-center gap-3"
+                  >
+                    <FaCheckCircle className="text-green-400 text-xl" />
+                    <p className="text-green-400 font-semibold">{t('contact.form.success')}</p>
+                  </motion.div>
+                )}
+
+                {error && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="mb-6 p-4 bg-red-500/20 border border-red-500 rounded-lg"
+                  >
+                    <p className="text-red-400">{error}</p>
+                  </motion.div>
+                )}
+
+                <div className="space-y-6">
+                  <div>
+                    <label className="flex items-center gap-2 text-white mb-2 font-semibold">
+                      <FaUser /> {t('contact.form.name')}
+                    </label>
+                    <input
+                      type="text"
+                      name="username"
+                      value={formData.username}
+                      onChange={handleChange}
+                      placeholder={t('contact.form.namePlaceholder')}
+                      required
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/50 transition-all"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="flex items-center gap-2 text-white mb-2 font-semibold">
+                      <FaEnvelope /> {t('contact.form.email')}
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder={t('contact.form.emailPlaceholder')}
+                      required
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/50 transition-all"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="flex items-center gap-2 text-white mb-2 font-semibold">
+                      <FaComment /> {t('contact.form.message')}
+                    </label>
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      placeholder={t('contact.form.messagePlaceholder')}
+                      required
+                      rows="5"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/50 transition-all resize-none"
+                    />
+                  </div>
+
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    type="submit"
+                    disabled={isLoading}
+                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-bold text-lg flex items-center justify-center gap-3 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isLoading ? (
+                      <>
+                        <motion.div
+                          animate={{ rotate: 360 }}
+                          transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+                          className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
+                        />
+                        {t('contact.form.sending')}
+                      </>
+                    ) : (
+                      <>
+                        <FaPaperPlane />
+                        {t('contact.form.send')}
+                      </>
+                    )}
+                  </motion.button>
+                </div>
+              </form>
+            </motion.div>
           </div>
-
-          <button
-            type="submit"
-            className="w-full text-white flex items-center justify-center py-2 rounded-md font-semibold bg-blue-700 hover:bg-blue-400 transition disabled:opacity-50"
-            disabled={isLoading}
-          >
-            {isLoading ? (
-              // Loader simple
-              <svg
-                className="animate-spin h-5 w-5 text-white"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <circle
-                  className="opacity-25"
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                ></circle>
-                <path
-                  className="opacity-75"
-                  fill="currentColor"
-                  d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-                ></path>
-              </svg>
-            ) : language === "es" ? (
-              "Enviar"
-            ) : (
-              "Send"
-            )}
-          </button>
-        </motion.form>
-
-        {/* Mensaje de éxito */}
-        {isSent && (
-          <motion.div
-            className={`text-center mt-4 transition duration-300 ${
-              darkMode ? "text-green-300" : "text-green-600"
-            }`}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            {language === "es"
-              ? "¡Mensaje enviado con éxito!"
-              : "Message sent successfully!"}
-          </motion.div>
-        )}
+        </motion.div>
       </div>
     </section>
   );

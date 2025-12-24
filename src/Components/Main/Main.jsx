@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import CountUp from "react-countup";
 import nameDecoration from "../../assets/nameDecoration.gif";
+import PropTypes from 'prop-types';
 
 const Main = ({ language, darkMode }) => {
   const heroTitle = language === "es" ? "¡Hola! Soy Juane." : "Hi! I'm Juane.";
@@ -80,7 +81,7 @@ const Main = ({ language, darkMode }) => {
           {devText}
         </motion.h2>
 
-        {/* Texto con efecto typewriter */}
+        
         <motion.div
           className={`mt-6 text-2xl md:text-3xl font-semibold min-h-[4rem] ${
             darkMode ? "text-white" : "text-gray-900"
@@ -100,7 +101,7 @@ const Main = ({ language, darkMode }) => {
           />
         </motion.div>
 
-        {/* Descripción */}
+        
         <motion.p
           className={`mt-6 text-lg md:text-xl ${
             darkMode ? "text-gray-400" : "text-gray-600"
@@ -112,7 +113,7 @@ const Main = ({ language, darkMode }) => {
           {description}
         </motion.p>
 
-        {/* Botón de CTA */}
+        
         <motion.a
           href="#projects"
           className="inline-block mt-8 px-6 py-3 text-lg font-bold bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition"
@@ -123,7 +124,7 @@ const Main = ({ language, darkMode }) => {
           {ctaText}
         </motion.a>
 
-        {/* Sección de estadísticas */}
+        
         <motion.div
           className="mt-12 flex flex-wrap items-center justify-center gap-8"
           initial={{ opacity: 0, y: 30 }}
@@ -157,6 +158,11 @@ const Main = ({ language, darkMode }) => {
       </div>
     </section>
   );
+};
+
+Main.propTypes = {
+  language: PropTypes.string.isRequired,
+  darkMode: PropTypes.bool.isRequired,
 };
 
 export default Main;

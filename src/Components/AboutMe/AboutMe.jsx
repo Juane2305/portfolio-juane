@@ -1,8 +1,7 @@
-// src/Components/AboutMe/AboutMe.jsx
-import React from "react";
 import { motion } from "framer-motion";
 import { FaReact, FaDatabase, FaJava } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
+import PropTypes from 'prop-types';
 
 const technologiesES = [
   {
@@ -117,7 +116,7 @@ const AboutMe = ({ language, darkMode }) => {
       className={`py-16 ${darkMode ? "bg-gray-800" : "bg-gray-50"}`}
     >
       <div className="container mx-auto px-4">
-        {/* Section Title */}
+        
         <motion.h2
           className={`text-3xl md:text-4xl font-bold text-center mb-8 ${
             darkMode ? "text-white" : "text-gray-800"
@@ -131,7 +130,7 @@ const AboutMe = ({ language, darkMode }) => {
         </motion.h2>
 
         <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-8">
-          {/* Avatar */}
+          
           <motion.div
             className="w-48 h-48 rounded-full overflow-hidden shadow-lg"
             initial={{ opacity: 0, scale: 0.8 }}
@@ -146,7 +145,7 @@ const AboutMe = ({ language, darkMode }) => {
             />
           </motion.div>
 
-          {/* Description */}
+          
           <motion.div
             className={`md:w-1/2 ${darkMode ? "text-gray-300" : "text-gray-700"}`}
             initial={{ opacity: 0, x: 50 }}
@@ -167,7 +166,7 @@ const AboutMe = ({ language, darkMode }) => {
           </motion.div>
         </div>
 
-        {/* Technologies Section */}
+        
         <motion.div
           className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6"
           initial={{ opacity: 0, y: 30 }}
@@ -194,7 +193,7 @@ const AboutMe = ({ language, darkMode }) => {
           ))}
         </motion.div>
 
-        {/* Certifications Section */}
+        
         <motion.div
           className="mt-12"
           initial={{ opacity: 0, y: 30 }}
@@ -223,6 +222,11 @@ const AboutMe = ({ language, darkMode }) => {
       </div>
     </section>
   );
+};
+
+AboutMe.propTypes = {
+  language: PropTypes.string,
+  darkMode: PropTypes.bool,
 };
 
 export default AboutMe;

@@ -1,7 +1,7 @@
-// src/Components/Header/Header.jsx
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaSun, FaMoon } from 'react-icons/fa';
+import PropTypes from 'prop-types';
 
 const mobileMenuVariants = {
   hidden: { opacity: 0, height: 0 },
@@ -22,7 +22,6 @@ const Header = ({ language, setLanguage, darkMode, setDarkMode }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Actualiza isScrolled al montar y al hacer scroll
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -32,14 +31,12 @@ const Header = ({ language, setLanguage, darkMode, setDarkMode }) => {
       }
     };
 
-    // Llamada inicial
     handleScroll();
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Smooth scroll a la sección
   const handleLinkClick = (id) => {
     const section = document.getElementById(id);
     if (section) {
@@ -64,7 +61,6 @@ const Header = ({ language, setLanguage, darkMode, setDarkMode }) => {
           { id: 'contact', label: 'Contact' },
         ];
 
-  // Clases del contenedor según darkMode y isScrolled
   const containerClasses = darkMode
     ? isScrolled
       ? 'w-[90%] bg-gray-950/70 backdrop-blur-md shadow-md rounded-3xl py-2 text-white mt-5'
@@ -82,12 +78,12 @@ const Header = ({ language, setLanguage, darkMode, setDarkMode }) => {
     >
       <div className={`mx-auto transition-all duration-300 ${containerClasses}`}>
         <div className="flex items-center justify-between px-8 py-3">
-          {/* Logo */}
+          
           <div className="flex items-center">
             <div className="text-2xl font-bold">Juane &lt;/&gt;</div>
           </div>
 
-          {/* Enlaces (Desktop) */}
+          
           <div className="hidden md:flex flex-1 justify-center space-x-8">
             {navItems.map((item) => (
               <motion.button
@@ -102,7 +98,7 @@ const Header = ({ language, setLanguage, darkMode, setDarkMode }) => {
             ))}
           </div>
 
-          {/* Idioma y Switch de Modo (Desktop) */}
+          
           <div className="flex items-center space-x-4">
             <div className="hidden md:flex items-center space-x-4">
               <button
@@ -128,7 +124,7 @@ const Header = ({ language, setLanguage, darkMode, setDarkMode }) => {
                 EN
               </button>
             </div>
-            {/* Switch de Modo Oscuro con íconos (Desktop) */}
+            
             <button
               onClick={() => setDarkMode(!darkMode)}
               className="hidden md:flex items-center px-2 py-1 rounded bg-gray-200 text-gray-800 hover:bg-blue-500 hover:text-white transition focus:outline-none"
@@ -183,7 +179,7 @@ const Header = ({ language, setLanguage, darkMode, setDarkMode }) => {
                   </motion.button>
                 ))}
               </div>
-              {/* Switch de Modo Oscuro en Mobile */}
+              
               <div className="px-4 pt-4 pb-2 flex justify-center">
                 <button
                   onClick={() => setDarkMode(!darkMode)}
@@ -196,7 +192,7 @@ const Header = ({ language, setLanguage, darkMode, setDarkMode }) => {
                   )}
                 </button>
               </div>
-              {/* Toggle de idioma en Mobile */}
+              
               <div className="px-4 pt-7 pb-5 flex justify-center space-x-4 border-t border-gray-200 mt-4">
                 <button
                   onClick={() => setLanguage('es')}
@@ -227,6 +223,13 @@ const Header = ({ language, setLanguage, darkMode, setDarkMode }) => {
       </div>
     </motion.nav>
   );
+};
+
+Header.propTypes = {
+  language: PropTypes.string.isRequired,
+  setLanguage: PropTypes.func.isRequired,
+  darkMode: PropTypes.bool.isRequired,
+  setDarkMode: PropTypes.func.isRequired,
 };
 
 export default Header;

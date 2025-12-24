@@ -1,24 +1,220 @@
 {
-    "home":"Inicio",
-    "about":"Sobre mí",
-    "projectsHeader":"Proyectos",
-    "mainText": "Juane Elizondo",
-    "developerText": "Desarrollador Fullstack",
-    "whoAmI": "¿Quién soy?",
-    "whoAmIInfo":"¡Hola! Soy Juan Emilio Elizondo, desarrollador full-stack radicado en Argentina, especializado en JavaScript (React y Node.js), PostgreSQL, HTML, CSS y Tailwind CSS. Junto a un socio, co-fundé ELIZCA, donde creamos diversos sitios web adaptados a diversas necesidades. ¡Colaboremos y demos vida a tus proyectos web con ",
-    "certDeveloper":"Graduado del programa Certified Tech Developer, una iniciativa de vanguardia creada en colaboración por Globant y Mercado Libre, ofrecida en asociación con Digital House. Este programa integral abarcó más de 1500 horas de instrucción teórica y práctica, proporcionando una base sólida en tecnología, desarrollo y trabajo en equipo.",
-    "henry":"Graduado como Full Stack Web Developer del bootcamp Henry, habiendo completado con éxito el programa en un periodo de 4 meses, incluyendo proyectos colaborativos en equipos de hasta 8 personas.",
-    "english":"Certificado de Inglés",
-    "download":"Descargar Certificado",
-    "knowledge":"Mi conocimiento",
-    "projects": "Algunos de mis mejores proyectos",
-    "contact":"Contacto",
-    "contactMe":"Contáctame",
-    "name":"Nombre",
-    "namePlaceholder":"Tu nombre",
-    "email":"Correo electrónico",
-    "emailPlaceholder":"ejemplo@ejemplo.com",
-    "message":"Mensaje",
-    "messagePlaceholder":"Tu mensaje...",
-    "send":"Enviar Mensaje"
+    "languageSelector": {
+        "title": "Selecciona tu idioma",
+        "subtitle": "Choose your language",
+        "spanish": "Español",
+        "english": "English"
+    },
+    "welcome": {
+        "greeting": "Bienvenido al portfolio de",
+        "name": "Juan Emilio Elizondo",
+        "role": "Front End Developer"
+    },
+    "nav": {
+        "home": "Inicio",
+        "about": "Sobre mí",
+        "experience": "Experiencia",
+        "skills": "Habilidades",
+        "projects": "Proyectos",
+        "education": "Formación",
+        "contact": "Contacto"
+    },
+    "hero": {
+        "greeting": "Hola, soy",
+        "name": "Juan Emilio Elizondo",
+        "role": "Front End Developer",
+        "description": "Desarrollador Front End con experiencia real en la creación de aplicaciones y sistemas web. Especializado en React y Tailwind CSS, creando interfaces limpias, escalables y orientadas al usuario.",
+        "cta": "Ver mis proyectos",
+        "contact": "Contáctame"
+    },
+    "about": {
+        "title": "Perfil Profesional",
+        "intro": "Desarrollador Front End con experiencia real en la creación de aplicaciones y sistemas web.",
+        "points": [
+            "Experiencia en empresas y proyectos de turismo, seguros, fitness, gestión de alquileres y sistemas de stock con ventas.",
+            "Especializado en React y Tailwind CSS, creando interfaces limpias, escalables y orientadas al usuario.",
+            "Colaboración activa en equipos multidisciplinarios bajo metodologías ágiles (Scrum y Kanban).",
+            "Pasión por aprender nuevas tecnologías, integrar servicios externos mediante APIs y aplicar buenas prácticas de programación."
+        ]
+    },
+    "experience": {
+        "title": "Experiencia Profesional",
+        "subtitle": "Desarrollador Front End (Contratista)",
+        "description": "Proyectos de gestión inmobiliaria y sistema de stock con ventas",
+        "responsibilities": [
+            "Desarrollo y mantenimiento de interfaces de usuario con React + Tailwind CSS.",
+            "Integración con APIs externas y sistemas backend (Java, Spring Boot, MySQL).",
+            "Participación en diseño de flujos completos de negocio y optimización de UX.",
+            "Colaboración en equipos ágiles, cumpliendo plazos y responsabilidades.",
+            "Experiencia liderando y colaborando en proyectos del mundo real, tomando decisiones técnicas junto a senior developers."
+        ],
+        "realExperience": "💼 Experiencia real:",
+        "realExperienceText": "He trabajado en proyectos de diferentes sectores incluyendo turismo, seguros, fitness, gestión de alquileres y sistemas de stock con ventas, siempre enfocándome en crear las mejores experiencias de usuario desde el front end.",
+        "stats": {
+            "projects": "Proyectos Reales",
+            "dedication": "Dedicación",
+            "experience": "Años Experiencia",
+            "learning": "Aprendizaje"
+        }
+    },
+    "skills": {
+        "title": "Stack y Habilidades",
+        "categories": {
+            "frontend": {
+                "title": "Front End",
+                "items": ["React", "Tailwind CSS", "TypeScript", "Redux", "JavaScript (ES6+)", "HTML5", "CSS3", "Responsive Design"]
+            },
+            "integration": {
+                "title": "Integración",
+                "items": ["APIs REST", "Servicios externos", "Autenticación JWT", "Axios"]
+            },
+            "backend": {
+                "title": "Backend (Complementario)",
+                "items": ["Java", "Spring Boot", "MySQL", "Node.js"]
+            },
+            "tools": {
+                "title": "Herramientas y Metodologías",
+                "items": ["Git & GitHub", "Scrum", "Kanban", "Desarrollo Ágil", "Trabajo en equipo", "VS Code"]
+            },
+            "soft": {
+                "title": "Habilidades Blandas",
+                "items": ["Autodidacta", "Aprendizaje rápido", "Colaboración con seniors", "Adaptabilidad", "Comunicación efectiva"]
+            }
+        },
+        "specialization": {
+            "title": "Especialización en React & Tailwind CSS",
+            "description": "Mi enfoque principal está en crear interfaces de usuario excepcionales con React y Tailwind CSS, siempre aplicando las mejores prácticas y manteniéndome actualizado con las últimas tendencias del desarrollo Front End."
+        }
+    },
+    "projects": {
+        "title": "Proyectos Destacados",
+        "otherProjects": "Otros Proyectos",
+        "otherProjectsDesc": "Proyectos adicionales con demos en vivo y repositorios disponibles",
+        "confidentialNote": " Demo y repositorio no disponibles por acuerdo de confidencialidad",
+        "viewMore": "Ver Más Proyectos",
+        "featured": [
+            {
+                "title": "Invitarly",
+                "description": "Plataforma completa para crear y gestionar invitaciones digitales para eventos. Sistema con pasarela de pago integrada, gestión de eventos y panel de administración.",
+                "features": [
+                    "Creación de invitaciones digitales personalizables",
+                    "Pasarela de pago integrada (MercadoPago)",
+                    "Sistema de confirmación de asistencia (RSVP)",
+                    "Panel de administración para gestión de eventos",
+                    "Integración completa Frontend-Backend"
+                ],
+                "tech": ["React", "Tailwind CSS", "Java", "Spring Boot", "MySQL"],
+                "link": "https://invitarly.com",
+                "repo": "https://github.com/Juane2305/invitarly-front",
+                "confidential": false
+            },
+            {
+                "title": "Sistema de Gestión Inmobiliaria",
+                "description": "Creación de plataforma web para administrar contratos, propiedades y usuarios. Proyecto empresarial bajo contrato de confidencialidad.",
+                "features": [
+                    "Integración con APIs externas",
+                    "Selects dinámicos y formularios multi-step",
+                    "Sistema de filtros y paginación",
+                    "Gestión completa de propiedades y contratos"
+                ],
+                "tech": ["React", "Tailwind CSS", "APIs REST", "Java", "Spring Boot"],
+                "confidential": true
+            },
+            {
+                "title": "Sistema de Stock con Ventas",
+                "description": "Aplicación web para control de inventario, ventas y roles de usuario (administrador, empleado, cliente).",
+                "features": [
+                    "Desarrollo de dashboards interactivos",
+                    "Sistema de reportes y estadísticas",
+                    "Administración de productos y usuarios",
+                    "Control de inventario en tiempo real"
+                ],
+                "tech": ["React", "Tailwind CSS", "Redux", "Java", "Spring Boot", "MySQL"],
+                "confidential": true
+            },
+            {
+                "title": "Proyectos de Fitness, Seguros y Turismo",
+                "description": "Participación en proyectos reales, integrando frontend con backend, optimizando experiencia de usuario y UI.",
+                "features": [
+                    "Desarrollo de interfaces intuitivas",
+                    "Optimización de UX/UI",
+                    "Integración con sistemas backend",
+                    "Trabajo en equipos multidisciplinarios"
+                ],
+                "tech": ["React", "Tailwind CSS", "APIs REST", "Metodologías ágiles"],
+                "confidential": false,
+                "note": "Ver sección 'Otros Proyectos' para demos en vivo"
+            }
+        ]
+    },
+    "education": {
+        "title": "Formación Académica",
+        "stats": {
+            "bootcamps": "Bootcamps",
+            "certifications": "Certificaciones",
+            "studyHours": "Horas de estudio",
+            "continuousLearning": "Aprendizaje continuo"
+        },
+        "badge": "🚀 En constante aprendizaje y crecimiento",
+        "items": [
+            {
+                "institution": "Digital House",
+                "year": "2024",
+                "title": "Certificación Full Stack Developer",
+                "description": "Programa Certified Tech Developer creado en colaboración por Globant y Mercado Libre. Más de 1500 horas de instrucción teórica y práctica."
+            },
+            {
+                "institution": "Henry",
+                "year": "2024",
+                "title": "Bootcamp Full Stack Developer",
+                "description": "Programa intensivo de 4 meses con proyectos colaborativos en equipos de hasta 8 personas."
+            },
+            {
+                "institution": "Cursos Complementarios",
+                "year": "2023-2024",
+                "title": "Java, POO, Spring Boot y MySQL",
+                "description": "Formación continua en tecnologías backend para mejor integración con Front End."
+            },
+            {
+                "institution": "EF Set",
+                "year": "2024",
+                "title": "Certificación de Inglés",
+                "description": "Certificación de nivel de inglés para trabajo internacional."
+            }
+        ]
+    },
+    "contact": {
+        "title": "Contacto",
+        "subtitle": "¿Tienes un proyecto en mente?",
+        "description": "Estoy disponible para colaborar en proyectos Front End. ¡Trabajemos juntos!",
+        "whyWorkWithMe": "¿Por qué trabajar conmigo?",
+        "benefits": [
+            "✨ Enfoque en experiencia de usuario",
+            "🚀 Código limpio y escalable",
+            "⚡ Entrega rápida y eficiente",
+            "🤝 Comunicación constante",
+            "💡 Soluciones creativas"
+        ],
+        "form": {
+            "name": "Nombre",
+            "namePlaceholder": "Tu nombre",
+            "email": "Correo electrónico",
+            "emailPlaceholder": "ejemplo@ejemplo.com",
+            "message": "Mensaje",
+            "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+            "send": "Enviar Mensaje",
+            "sending": "Enviando...",
+            "success": "¡Mensaje enviado con éxito!",
+            "error": "Error al enviar el mensaje. Intenta de nuevo."
+        }
+    },
+    "footer": {
+        "description": "Front End Developer especializado en React y Tailwind CSS. Creando experiencias web excepcionales.",
+        "quickLinks": "Enlaces Rápidos",
+        "contactTitle": "Contacto",
+        "rights": "Todos los derechos reservados",
+        "madeWith": "Hecho con",
+        "by": "por",
+        "developedWith": "Desarrollado con"
+    }
 }

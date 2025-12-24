@@ -1,23 +1,12 @@
 import { motion } from 'framer-motion';
 import { FiEye } from 'react-icons/fi';
 import { FaGithub } from 'react-icons/fa';
+import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 
 const projectData = [
   {
     id: 1,
-    name: 'Invitarly',
-    description_es:
-      'Plataforma para crear invitaciones digitales y gestionar eventos con pasarela de pago integrada. Proyecto Real.',
-    description_en:
-      'Platform for creating digital invitations and managing events with an integrated payment gateway. Real project.',
-    technologies: ['React', 'Tailwind CSS', 'Java', 'Springboot' , 'MySQL'],
-    image:
-      'https://res.cloudinary.com/dfschbyq2/image/upload/v1743012024/84b522fe-73ac-46ab-acc8-ccb317537989.png',
-    demoLink: 'https://invitarly.com',
-    repoLink: 'https://github.com/Juane2305/invitarly-front',
-  },
-  {
-    id: 2,
     name: 'Calicata',
     description_es:
       'Página para empresa dedicada a vender paquetes turísticos. Proyecto Real.',
@@ -30,7 +19,7 @@ const projectData = [
     repoLink: 'https://github.com/Juane2305/calicata',
   },
   {
-    id: 3,
+    id: 2,
     name: 'Pizzolato Elizondo Seguros',
     description_es:
       'Página para empresa dedicada a la venta de seguros. Proyecto Real.',
@@ -43,7 +32,7 @@ const projectData = [
     repoLink: 'https://github.com/Juane2305/elizondo-pizzolato',
   },
   {
-    id: 4,
+    id: 3,
     name: 'Black GYM',
     description_es:
       'Página para gimnasio ubicado en Mendoza, Argentina. Proyecto Real.',
@@ -56,7 +45,7 @@ const projectData = [
     repoLink: 'https://github.com/Juane2305/black_gym',
   },
   {
-    id: 5,
+    id: 4,
     name: 'Cosmética Vibras',
     description_es:
       'Página de centro de cosmética. Proyecto Ficticio.',
@@ -69,7 +58,7 @@ const projectData = [
     repoLink: 'https://github.com/Juane2305/estetica',
   },
   {
-    id: 6,
+    id: 5,
     name: 'MJ Agency',
     description_es:
       'Página para empresa de gestión contable. Proyecto Real.',
@@ -83,9 +72,9 @@ const projectData = [
   },
 ];
 
-const Projects = ({ language, darkMode }) => {
-  const heading =
-    language === 'es' ? 'Proyectos más recientes' : 'Recent Projects';
+const Projects = ({ darkMode }) => {
+  const { i18n } = useTranslation();
+  const currentLang = i18n.language;
 
   const containerVariants = {
     hidden: {},
@@ -112,19 +101,8 @@ const Projects = ({ language, darkMode }) => {
       className={`py-16 ${darkMode ? "bg-gray-900" : "bg-white"}`}
     >
       <div className="container mx-auto px-4">
-        <motion.h2
-          className={`text-3xl md:text-4xl font-bold text-center mb-8 ${
-            darkMode ? "text-white" : "text-gray-800"
-          }`}
-          initial={{ opacity: 0, scale: 0.95, y: 40 }}
-          whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
-          {heading}
-        </motion.h2>
 
-        {/* Grid de tarjetas */}
+        
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
@@ -140,14 +118,14 @@ const Projects = ({ language, darkMode }) => {
               }`}
               variants={cardVariants}
             >
-              {/* Imagen del proyecto */}
+              
               <img
                 src={project.image}
                 alt={project.name}
                 className="object-cover w-full h-60"
               />
 
-              {/* Contenido */}
+              
               <div className="p-4 flex-1 flex flex-col justify-between">
                 <div>
                   <h3
@@ -162,12 +140,12 @@ const Projects = ({ language, darkMode }) => {
                       darkMode ? "text-gray-300" : "text-gray-600"
                     }`}
                   >
-                    {language === 'es'
+                    {currentLang === 'es'
                       ? project.description_es
                       : project.description_en}
                   </p>
 
-                  {/* Tecnologías */}
+                  
                   <div className="flex flex-wrap gap-2 mb-3">
                     {project.technologies.map((tech) => (
                       <span
@@ -180,7 +158,7 @@ const Projects = ({ language, darkMode }) => {
                   </div>
                 </div>
 
-                {/* Enlaces */}
+                
                 <div className="mt-2 flex justify-between items-center">
                   <motion.a
                     href={project.demoLink}
@@ -208,6 +186,11 @@ const Projects = ({ language, darkMode }) => {
       </div>
     </section>
   );
+};
+
+Projects.propTypes = {
+  language: PropTypes.string,
+  darkMode: PropTypes.bool,
 };
 
 export default Projects;

@@ -1,20 +1,6 @@
-import React, { useEffect, useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 
 const WhatsAppFloatingButton = () => {
-  const [showBubble, setShowBubble] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowBubble(false);
-    }, 5000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  const handleBubbleClick = () => {
-    setShowBubble(false);
-  };
 
   return (
     <div className="fixed z-50 bottom-6 right-6 flex flex-col items-end space-y-2">
@@ -41,7 +27,7 @@ const WhatsAppFloatingButton = () => {
         title="¡Hola! Tengo una duda sobre las invitaciones"
       >
         <FaWhatsapp size={24} />
-        {/* El texto se oculta en mobile y aparece en desktop */}
+        
         <span className="hidden md:inline-block ml-2 font-semibold">
           WhatsApp
         </span>
