@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Juan Emilio Elizondo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #2563eb;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .contact-info a {
+            color: #64748b;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: #2563eb;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1e293b;
+            text-transform: uppercase;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .summary {
+            font-size: 15px;
+            color: #475569;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        .experience-item,
+        .education-item,
+        .project-item {
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 5px;
+        }
+
+        .meta {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        li {
+            font-size: 14px;
+            color: #475569;
+            margin-bottom: 5px;
+            line-height: 1.5;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .skill-category {
+            margin-bottom: 10px;
+        }
+
+        .skill-category strong {
+            font-size: 14px;
+            color: #1e293b;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .skill-list {
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.5;
+        }
+
+        .tech-stack {
+            display: inline-block;
+            background: #f1f5f9;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #475569;
+            margin-right: 6px;
+            margin-bottom: 6px;
+        }
+
+        @page {
+            margin: 0.5cm;
+            size: A4;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+            }
+            .container {
+                padding: 20px;
+                margin: 0;
+            }
+            a {
+                color: #333 !important;
+                text-decoration: none;
+            }
+            header, section {
+                page-break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Juan Emilio Elizondo</h1>
+            <div class="subtitle">Front End Developer</div>
+            <div class="contact-info">
+                <span>📧 juane.elizondo23@gmail.com</span>
+                <span>📱 +54 261 2404253</span>
+                <a href="https://www.juaneelizondo.com" target="_blank">🌐 Portfolio</a>
+                <a href="https://linkedin.com/in/juan-emilio-elizondo" target="_blank">💼 LinkedIn</a>
+                <a href="https://github.com/Juane2305" target="_blank">💻 GitHub</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>Perfil Profesional</h2>
+            <p class="summary">
+                Desarrollador Front End con más de 3 años de experiencia especializado en React y Tailwind CSS. Formación intensiva en bootcamps Full Stack (Digital House y Henry) con más de 1500 horas de capacitación teórica y práctica. Experiencia comprobada en el desarrollo de aplicaciones web escalables, creación de interfaces de usuario intuitivas y trabajo con tecnologías backend para integraciones completas. Enfoque en código limpio, experiencia de usuario excepcional y entregas eficientes. Portfolio de proyectos reales implementados en producción.
+            </p>
+        </section>
+
+        <section>
+            <h2>Experiencia Profesional</h2>
+            
+            <div class="experience-item">
+                <h3>Desarrollador Front End - AlquilUp (Sistema de Gestión Inmobiliaria)</h3>
+                <div class="meta">2025 - Presente | Mendoza, Argentina</div>
+                <div class="description">
+                    Desarrollo de plataforma web integral para administración de propiedades, contratos, pagos y usuarios. Implementación de formularios complejos y gestión de datos en tiempo real.
+                </div>
+                <ul>
+                    <li>Diseño e implementación de interfaces de usuario intuitivas con React y Tailwind CSS</li>
+                    <li>Integración completa con APIs REST para gestión de contratos y propiedades</li>
+                    <li>Desarrollo de formularios dinámicos y validación de datos del lado del cliente</li>
+                    <li>Optimización de rendimiento y experiencia de usuario en aplicaciones empresariales</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Desarrollador Full Stack - Sistema de Gestión de Stock</h3>
+                <div class="meta">2025 - Presente | Mendoza, Argentina</div>
+                <div class="description">
+                    Desarrollo de sistema completo de inventario y gestión de stock con autenticación y roles de usuario. Implementación de arquitectura full stack con React, Java Spring Boot y MySQL.
+                </div>
+                <ul>
+                    <li>Desarrollo de frontend completo con React y Tailwind CSS</li>
+                    <li>Implementación de sistema de autenticación y autorización basado en roles</li>
+                    <li>Creación de API REST con Java Spring Boot para gestión de inventario</li>
+                    <li>Diseño y optimización de base de datos MySQL</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <h3>Desarrollador Front End - Proyectos Freelance</h3>
+                <div class="meta">2022 - 2024 | Mendoza, Argentina</div>
+                <div class="description">
+                    Desarrollo de soluciones web completas para clientes en diversos sectores (turismo, seguros, fitness, gestión empresarial). Especialización en React y Tailwind CSS con integración de APIs REST.
+                </div>
+                <ul>
+                    <li>Desarrollo de más de 5 proyectos web en producción con alta satisfacción del cliente</li>
+                    <li>Implementación de arquitecturas escalables y mantenibles con React y Redux</li>
+                    <li>Integración de sistemas de pago (MercadoPago) y gestión de autenticación</li>
+                    <li>Colaboración en equipos ágiles de hasta 8 personas en proyectos de bootcamp</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Proyectos Destacados</h2>
+
+            <div class="project-item">
+                <h3>Invitarly - Plataforma de Invitaciones Digitales</h3>
+                <div class="meta">2024 | https://invitarly.com</div>
+                <div class="description">
+                    Plataforma completa para crear y gestionar invitaciones digitales para eventos con pasarela de pago integrada, sistema RSVP y panel de administración.
+                </div>
+                <div>
+                    <span class="tech-stack">React</span>
+                    <span class="tech-stack">Tailwind CSS</span>
+                    <span class="tech-stack">Java</span>
+                    <span class="tech-stack">Spring Boot</span>
+                    <span class="tech-stack">MySQL</span>
+                    <span class="tech-stack">MercadoPago API</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h3>Calicata - Sitio Web de Turismo</h3>
+                <div class="meta">2024 | https://calicata.vercel.app</div>
+                <div class="description">
+                    Página web responsive para empresa dedicada a vender paquetes turísticos. Diseño moderno y optimizado para conversión.
+                </div>
+                <div>
+                    <span class="tech-stack">React</span>
+                    <span class="tech-stack">Tailwind CSS</span>
+                    <span class="tech-stack">Vercel</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h3>Pizzolato Elizondo Seguros & Black GYM</h3>
+                <div class="meta">2024 | Proyectos en Producción</div>
+                <div class="description">
+                    Desarrollo de sitios web corporativos para empresa de seguros y gimnasio, respectivamente. Implementación de diseño responsive y optimización SEO.
+                </div>
+                <div>
+                    <span class="tech-stack">React</span>
+                    <span class="tech-stack">Tailwind CSS</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Formación Académica</h2>
+
+            <div class="education-item">
+                <h3>Certificación Full Stack Developer</h3>
+                <div class="meta">Digital House | 2023 - 2024</div>
+                <div class="description">
+                    Programa Certified Tech Developer creado en colaboración con Globant y Mercado Libre. Más de 1500 horas de instrucción teórica y práctica en desarrollo web full stack.
+                </div>
+            </div>
+
+            <div class="education-item">
+                <h3>Bootcamp Full Stack Developer</h3>
+                <div class="meta">Henry | 2024</div>
+                <div class="description">
+                    Programa intensivo de 4 meses con proyectos colaborativos en equipos de hasta 8 personas. Metodologías ágiles y desarrollo de proyectos reales.
+                </div>
+            </div>
+
+            <div class="education-item">
+                <h3>Certificaciones Complementarias</h3>
+                <div class="meta">2023-2024</div>
+                <ul>
+                    <li>Programación Orientada a Objetos (POO) con Java</li>
+                    <li>Spring Boot - Desarrollo de APIs REST</li>
+                    <li>MySQL - Gestión de Bases de Datos</li>
+                    <li>Certificación de Inglés - EF Set (2024)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <strong>Frontend</strong>
+                    <div class="skill-list">React, Tailwind CSS, TypeScript, Redux, Zustand, JavaScript (ES6+), HTML5, CSS3, Responsive Design</div>
+                </div>
+                <div class="skill-category">
+                    <strong>Backend & Integración</strong>
+                    <div class="skill-list">Java, Spring Boot, MySQL, PostgreSQL, Node.js, APIs REST, Axios</div>
+                </div>
+                <div class="skill-category">
+                    <strong>Herramientas & Control de Versiones</strong>
+                    <div class="skill-list">Git, GitHub, Vite, npm, Vercel, Cloudinary</div>
+                </div>
+                <div class="skill-category">
+                    <strong>Metodologías & Soft Skills</strong>
+                    <div class="skill-list">Metodologías Ágiles, Trabajo en Equipo, Resolución de Problemas, Comunicación Efectiva, Aprendizaje Continuo</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Idiomas</h2>
+            <div class="description">
+                <strong>Español:</strong> Nativo | <strong>Inglés:</strong> Conversacional (Certificado EF Set 2024)
+            </div>
+        </section>
+    </div>
+</body>
+</html>
