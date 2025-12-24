@@ -156,18 +156,21 @@
             "continuousLearning": "Aprendizaje continuo"
         },
         "badge": "🚀 En constante aprendizaje y crecimiento",
+        "viewCertificate": "Ver certificado",
         "items": [
             {
                 "institution": "Digital House",
                 "year": "2024",
                 "title": "Certificación Full Stack Developer",
-                "description": "Programa Certified Tech Developer creado en colaboración por Globant y Mercado Libre. Más de 1500 horas de instrucción teórica y práctica."
+                "description": "Programa Certified Tech Developer creado en colaboración por Globant y Mercado Libre. Más de 1500 horas de instrucción teórica y práctica.",
+                "certificateKey": "digitalHouse"
             },
             {
                 "institution": "Henry",
                 "year": "2024",
                 "title": "Bootcamp Full Stack Developer",
-                "description": "Programa intensivo de 4 meses con proyectos colaborativos en equipos de hasta 8 personas."
+                "description": "Programa intensivo de 4 meses con proyectos colaborativos en equipos de hasta 8 personas.",
+                "certificateKey": "henry"
             },
             {
                 "institution": "Cursos Complementarios",
@@ -176,10 +179,25 @@
                 "description": "Formación continua en tecnologías backend para mejor integración con Front End."
             },
             {
+                "institution": "Formación Complementaria",
+                "year": "2023",
+                "title": "Programación Orientada a Objetos (POO)",
+                "description": "Certificado de fundamentos de POO aplicado a Java.",
+                "certificateKeys": ["poo"]
+            },
+            {
+                "institution": "Formación Complementaria",
+                "year": "2023",
+                "title": "Spring Boot",
+                "description": "Certificado de desarrollo de APIs con Spring Boot.",
+                "certificateKeys": ["springboot"]
+            },
+            {
                 "institution": "EF Set",
                 "year": "2024",
                 "title": "Certificación de Inglés",
-                "description": "Certificación de nivel de inglés para trabajo internacional."
+                "description": "Certificación de nivel de inglés para trabajo internacional.",
+                "certificateKey": "efset"
             }
         ]
     },

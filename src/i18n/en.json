@@ -156,18 +156,21 @@
             "continuousLearning": "Continuous learning"
         },
         "badge": "🚀 In constant learning and growth",
+        "viewCertificate": "View certificate",
         "items": [
             {
                 "institution": "Digital House",
                 "year": "2024",
                 "title": "Full Stack Developer Certification",
-                "description": "Certified Tech Developer program created in collaboration by Globant and Mercado Libre. Over 1500 hours of theoretical and practical instruction."
+                "description": "Certified Tech Developer program created in collaboration by Globant and Mercado Libre. Over 1500 hours of theoretical and practical instruction.",
+                "certificateKey": "digitalHouse"
             },
             {
                 "institution": "Henry",
                 "year": "2024",
                 "title": "Full Stack Developer Bootcamp",
-                "description": "Intensive 4-month program with collaborative projects in teams of up to 8 people."
+                "description": "Intensive 4-month program with collaborative projects in teams of up to 8 people.",
+                "certificateKey": "henry"
             },
             {
                 "institution": "Complementary Courses",
@@ -176,10 +179,25 @@
                 "description": "Continuous training in backend technologies for better Front End integration."
             },
             {
+                "institution": "Complementary Training",
+                "year": "2023",
+                "title": "Object-Oriented Programming (OOP)",
+                "description": "Certificate in OOP fundamentals applied to Java.",
+                "certificateKeys": ["poo"]
+            },
+            {
+                "institution": "Complementary Training",
+                "year": "2023",
+                "title": "Spring Boot",
+                "description": "Certificate in building APIs with Spring Boot.",
+                "certificateKeys": ["springboot"]
+            },
+            {
                 "institution": "EF Set",
                 "year": "2024",
                 "title": "English Certification",
-                "description": "English proficiency certification for international work."
+                "description": "English proficiency certification for international work.",
+                "certificateKey": "efset"
             }
         ]
     },

@@ -1,10 +1,22 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { FaGraduationCap, FaCertificate, FaCalendar, FaUniversity } from 'react-icons/fa';
+import digitalHouseCert from '../../assets/DigitalHouse.pdf';
+import henryCert from '../../assets/HENRY.pdf';
+import efsetCert from '../../assets/EFSETCertificate.pdf';
+import pooCert from '../../assets/POO.html?url';
+import springbootCert from '../../assets/Springboot.html?url';
 
 const Education = () => {
   const { t } = useTranslation();
   const educationItems = t('education.items', { returnObjects: true });
+  const certificateMap = {
+    digitalHouse: digitalHouseCert,
+    henry: henryCert,
+    efset: efsetCert,
+    poo: pooCert,
+    springboot: springbootCert,
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -87,7 +99,7 @@ const Education = () => {
                         transition={{ duration: 0.6 }}
                         className="text-5xl"
                       >
-                        {icons[index]}
+                        {icons[index % icons.length]}
                       </motion.div>
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-2">
@@ -104,6 +116,22 @@ const Education = () => {
                       </div>
                     </div>
                     <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                    {(() => {
+                      const keys = item.certificateKeys || (item.certificateKey ? [item.certificateKey] : []);
+                      return keys
+                        .filter((key) => certificateMap[key])
+                        .map((key) => (
+                          <a
+                            key={key}
+                            href={certificateMap[key]}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors mr-2"
+                          >
+                            {t('education.viewCertificate')}
+                          </a>
+                        ));
+                    })()}
                   </motion.div>
 
                   
