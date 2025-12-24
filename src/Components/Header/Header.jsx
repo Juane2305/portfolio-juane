@@ -217,7 +217,6 @@ const Header = ({ language, setLanguage, darkMode, setDarkMode }) => {
                   EN
                 </button>
               </div>
-            </motion.div>
           )}
         </AnimatePresence>
       </div>

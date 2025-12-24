@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaFileDownload } from 'react-icons/fa';
 
 const Hero = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -97,6 +97,18 @@ const Hero = () => {
               >
                 {t('hero.contact')}
               </motion.button>
+
+              <motion.a
+                whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(34, 197, 94, 0.5)' }}
+                whileTap={{ scale: 0.95 }}
+                href={i18n.language === 'en' ? '/Resume - Juan Emilio Elizondo.pdf' : '/CV - Juan Emilio Elizondo.pdf'}
+                download
+                className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg transition-colors min-w-[200px] flex items-center justify-center gap-2"
+                title={i18n.language === 'en' ? 'Download Resume' : 'Descargar CV'}
+              >
+                <FaFileDownload size={20} />
+                {i18n.language === 'en' ? 'Resume' : 'CV'}
+              </motion.a>
             </motion.div>
 
             <motion.div
