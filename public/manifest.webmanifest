@@ -1,0 +1,21 @@
+{
+  "name": "Juan Emilio Elizondo",
+  "short_name": "Juane",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#2563eb",
+  "description": "Portfolio de Juan Emilio Elizondo — Front End Developer.",
+  "icons": [
+    {
+      "src": "https://res.cloudinary.com/dfschbyq2/image/upload/v1743045680/Disen%CC%83o_sin_ti%CC%81tulo_10_kbgjgm.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://res.cloudinary.com/dfschbyq2/image/upload/v1743045680/Disen%CC%83o_sin_ti%CC%81tulo_10_kbgjgm.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

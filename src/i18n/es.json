@@ -201,6 +201,14 @@
             }
         ]
     },
+    "whatsapp": {
+        "label": "Chatear por WhatsApp",
+        "placeholder": "Hola Juane, me interesa tu trabajo para...",
+        "defaultMessage": "Hola Juane, me gustaría contactarte.",
+        "question": "¿Qué te gustaría decir?",
+        "send": "Enviar",
+        "cancel": "Cancelar"
+    },
     "contact": {
         "title": "Contacto",
         "subtitle": "¿Tienes un proyecto en mente?",

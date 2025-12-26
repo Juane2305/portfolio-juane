@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
+import { FiGlobe } from 'react-icons/fi';
 
 const LanguageSelector = ({ onSelectLanguage }) => {
   const { t } = useTranslation();
@@ -47,7 +48,7 @@ const LanguageSelector = ({ onSelectLanguage }) => {
             onClick={() => handleLanguageSelect('es')}
             className="bg-white text-purple-900 px-12 py-6 rounded-2xl text-2xl font-bold shadow-2xl hover:bg-gray-100 transition-colors min-w-[200px]"
           >
-            🇪🇸 Español
+            <span className="inline-flex items-center justify-center gap-3"><FiGlobe aria-hidden="true" /> Español</span>
           </motion.button>
 
           <motion.button
@@ -56,7 +57,7 @@ const LanguageSelector = ({ onSelectLanguage }) => {
             onClick={() => handleLanguageSelect('en')}
             className="bg-white text-purple-900 px-12 py-6 rounded-2xl text-2xl font-bold shadow-2xl hover:bg-gray-100 transition-colors min-w-[200px]"
           >
-            🇺🇸 English
+            <span className="inline-flex items-center justify-center gap-3"><FiGlobe aria-hidden="true" /> English</span>
           </motion.button>
         </motion.div>
 

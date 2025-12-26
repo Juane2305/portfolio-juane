@@ -4,10 +4,71 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/dfschbyq2/image/upload/v1743045680/Disen%CC%83o_sin_ti%CC%81tulo_10_kbgjgm.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google" content="notranslate" />
+    <meta name="description" content="Portfolio de Juan Emilio Elizondo — Front End Developer especializado en React, Tailwind CSS y integraciones full stack." />
+    <link rel="canonical" href="https://www.juaneelizondo.com/" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Juan Emilio Elizondo — Front End Developer" />
+    <meta property="og:description" content="Experiencia real en React, Tailwind CSS y sistemas con Java/Spring Boot. Proyectos en producción y CV descargable." />
+    <meta property="og:url" content="https://www.juaneelizondo.com/" />
+    <meta property="og:image" content="https://res.cloudinary.com/dfschbyq2/image/upload/v1743045680/Disen%CC%83o_sin_ti%CC%81tulo_10_kbgjgm.png" />
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Juan Emilio Elizondo — Front End Developer" />
+    <meta name="twitter:description" content="Experiencia en React/Tailwind y proyectos reales. Descarga el CV en español o inglés." />
+    <meta name="twitter:image" content="https://res.cloudinary.com/dfschbyq2/image/upload/v1743045680/Disen%CC%83o_sin_ti%CC%81tulo_10_kbgjgm.png" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.webmanifest" />
     <title>Juane Elizondo</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Register basic Service Worker for PWA
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(() => {});
+        });
+      }
+      // JSON-LD Schema
+      const ld = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Juan Emilio Elizondo",
+        "url": "https://www.juaneelizondo.com/",
+        "inLanguage": ["es-AR", "en"],
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.juaneelizondo.com/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      };
+      const person = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Juan Emilio Elizondo",
+        "jobTitle": "Front End Developer",
+        "url": "https://www.juaneelizondo.com/",
+        "email": "mailto:juane.elizondo23@gmail.com",
+        "knowsAbout": ["React", "Tailwind CSS", "Java", "Spring Boot", "MySQL", "REST APIs"],
+        "sameAs": [
+          "https://github.com/Juane2305",
+          "https://www.linkedin.com/in/juan-emilio-elizondo/"
+        ]
+      };
+      const s1 = document.createElement('script');
+      s1.type = 'application/ld+json';
+      s1.text = JSON.stringify(ld);
+      document.head.appendChild(s1);
+      const s2 = document.createElement('script');
+      s2.type = 'application/ld+json';
+      s2.text = JSON.stringify(person);
+      document.head.appendChild(s2);
+    </script>
   </body>
 </html>

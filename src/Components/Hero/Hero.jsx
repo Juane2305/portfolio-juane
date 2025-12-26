@@ -124,6 +124,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-blue-400 transition-colors"
+                aria-label="GitHub"
               >
                 <FaGithub size={32} />
               </motion.a>
@@ -135,6 +136,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-blue-400 transition-colors"
+                aria-label="LinkedIn"
               >
                 <FaLinkedin size={32} />
               </motion.a>
@@ -145,6 +147,7 @@ const Hero = () => {
                 href="mailto:juane.elizondo23@gmail.com"
                 onClick={handleEmailClick}
                 className="text-white hover:text-blue-400 transition-colors"
+                aria-label="Email"
               >
                 <FaEnvelope size={32} />
               </motion.a>

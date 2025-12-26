@@ -201,6 +201,14 @@
             }
         ]
     },
+    "whatsapp": {
+        "label": "Chat on WhatsApp",
+        "placeholder": "Hi Juane, I'm interested in your work for...",
+        "defaultMessage": "Hi Juane, I'd like to get in touch with you.",
+        "question": "What would you like to say?",
+        "send": "Send",
+        "cancel": "Cancel"
+    },
     "contact": {
         "title": "Contact",
         "subtitle": "Have a project in mind?",
