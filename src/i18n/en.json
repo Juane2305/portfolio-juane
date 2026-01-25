@@ -133,17 +133,17 @@
                 "confidential": true
             },
             {
-                "title": "Fitness, Insurance, and Tourism Projects",
-                "description": "Participation in real projects, integrating frontend with backend, optimizing user experience and UI.",
+                "title": "Koink - Financial Management",
+                "description": "Advanced financial management platform that allows users to project their long-term economic health. The system facilitates the creation of dynamic budgets, financial goal management, and multi-currency support, transforming complex data into decision-making tools for smarter asset management.",
                 "features": [
-                    "Development of intuitive interfaces",
-                    "UX/UI optimization",
-                    "Integration with backend systems",
-                    "Work in multidisciplinary teams"
+                    "Long-term financial health projection",
+                    "Dynamic budget creation",
+                    "Financial goal management",
+                    "Multi-currency support and asset management"
                 ],
-                "tech": ["React", "Tailwind CSS", "REST APIs", "Agile methodologies"],
-                "confidential": false,
-                "note": "See 'Other Projects' section for live demos"
+                "tech": ["React", "Redux", "TypeScript", "Tailwind CSS", "Supabase"],
+                "link": "https://www.koinkapp.com",
+                "confidential": false
             }
         ]
     },

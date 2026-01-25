@@ -133,17 +133,17 @@
                 "confidential": true
             },
             {
-                "title": "Proyectos de Fitness, Seguros y Turismo",
-                "description": "Participación en proyectos reales, integrando frontend con backend, optimizando experiencia de usuario y UI.",
+                "title": "Koink - Gestión Financiera",
+                "description": "Plataforma avanzada de administración financiera que permite a los usuarios proyectar su salud económica a largo plazo. El sistema facilita la creación de presupuestos dinámicos, la gestión de objetivos financieros y el soporte multi-divisa, transformando datos complejos en herramientas de decisión para una gestión de activos más inteligente.",
                 "features": [
-                    "Desarrollo de interfaces intuitivas",
-                    "Optimización de UX/UI",
-                    "Integración con sistemas backend",
-                    "Trabajo en equipos multidisciplinarios"
+                    "Proyección de salud económica a largo plazo",
+                    "Creación de presupuestos dinámicos",
+                    "Gestión de objetivos financieros",
+                    "Soporte multi-divisa y gestión de activos"
                 ],
-                "tech": ["React", "Tailwind CSS", "APIs REST", "Metodologías ágiles"],
-                "confidential": false,
-                "note": "Ver sección 'Otros Proyectos' para demos en vivo"
+                "tech": ["React", "Redux", "TypeScript", "Tailwind CSS", "Supabase"],
+                "link": "https://www.koinkapp.com",
+                "confidential": false
             }
         ]
     },
@@ -160,7 +160,7 @@
         "items": [
             {
                 "institution": "Digital House",
-                "year": "2024",
+                "year": "2022 - 2024",
                 "title": "Certificación Full Stack Developer",
                 "description": "Programa Certified Tech Developer creado en colaboración por Globant y Mercado Libre. Más de 1500 horas de instrucción teórica y práctica.",
                 "certificateKey": "digitalHouse"
@@ -174,7 +174,7 @@
             },
             {
                 "institution": "Cursos Complementarios",
-                "year": "2023-2024",
+                "year": "2023 - 2024",
                 "title": "Java, POO, Spring Boot y MySQL",
                 "description": "Formación continua en tecnologías backend para mejor integración con Front End."
             },
