@@ -23,7 +23,7 @@ const Experience = () => {
   const icons = [
     { icon: FaReact, color: 'text-blue-500' },
     { icon: FaCode, color: 'text-green-500' },
-    { icon: FaUsers, color: 'text-purple-500' },
+    { icon: FaUsers, color: 'text-cyan-500' },
     { icon: FaLightbulb, color: 'text-yellow-500' },
   ];
 
@@ -52,13 +52,13 @@ const Experience = () => {
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"
+              className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto"
             />
           </div>
 
           <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 relative overflow-hidden">
             
-            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600"></div>
+            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600"></div>
 
             
             <div className="absolute top-8 right-8 opacity-10">
@@ -122,7 +122,7 @@ const Experience = () => {
 
               <motion.div
                 variants={itemVariants}
-                className="mt-10 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border-l-4 border-blue-600"
+                className="mt-10 p-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl border-l-4 border-blue-600"
               >
                 <p className="text-gray-700 text-lg leading-relaxed">
                   <span className="font-bold text-blue-600">{t('experience.realExperience')}</span> {t('experience.realExperienceText')}
@@ -155,7 +155,7 @@ const Experience = () => {
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.6 + index * 0.1, duration: 0.5 }}
-                  className="text-4xl font-bold text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text mb-2"
+                  className="text-4xl font-bold text-transparent bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text mb-2"
                 >
                   {stat.number}
                 </motion.p>

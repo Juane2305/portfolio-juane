@@ -16,7 +16,7 @@ const Skills = () => {
     'React': <FaReact className="text-[#61DAFB]" />,
     'Tailwind CSS': <SiTailwindcss className="text-[#06B6D4]" />,
     'TypeScript': <SiTypescript className="text-[#3178C6]" />,
-    'Redux': <SiRedux className="text-[#764ABC]" />,
+    'Redux': <SiRedux className="text-[#593d88]" />,
     'JavaScript (ES6+)': <SiJavascript className="text-[#F7DF1E]" />,
     'HTML5': <FaHtml5 className="text-[#E34F26]" />,
     'CSS3': <FaCss3Alt className="text-[#1572B6]" />,
@@ -32,7 +32,7 @@ const Skills = () => {
     'Autodidacta': <FaLightbulb className="text-yellow-500" />,
     'Aprendizaje rápido': <FaBolt className="text-orange-500" />,
     'Colaboración con seniors': <FaUsers className="text-blue-500" />,
-    'Adaptabilidad': <FaBolt className="text-purple-500" />,
+    'Adaptabilidad': <FaBolt className="text-cyan-500" />,
     'Comunicación efectiva': <FaHandshake className="text-green-500" />,
   };
 
@@ -54,7 +54,7 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+    <section id="skills" className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-slate-900">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -78,7 +78,7 @@ const Skills = () => {
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto"
+              className="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto"
             />
           </div>
 
@@ -97,7 +97,7 @@ const Skills = () => {
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all"
               >
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                  <span className="w-2 h-8 bg-gradient-to-b from-blue-400 to-purple-400 rounded-full"></span>
+                  <span className="w-2 h-8 bg-gradient-to-b from-blue-400 to-cyan-400 rounded-full"></span>
                   {category.title}
                 </h3>
 
@@ -139,7 +139,7 @@ const Skills = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="mt-16 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
+            className="mt-16 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
           >
             <div className="text-center">
               <motion.div

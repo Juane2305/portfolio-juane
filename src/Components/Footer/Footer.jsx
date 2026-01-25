@@ -17,7 +17,7 @@ const Footer = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             
             <div>
-              <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Juan Emilio Elizondo
               </h3>
               <p className="text-gray-400 text-sm">
@@ -116,7 +116,7 @@ const Footer = () => {
               {t('footer.developedWith')}{' '}
               <span className="text-blue-400 font-semibold">React</span>,{' '}
               <span className="text-cyan-400 font-semibold">Tailwind CSS</span> y{' '}
-              <span className="text-purple-400 font-semibold">Framer Motion</span>
+              <span className="text-blue-400 font-semibold">Framer Motion</span>
             </p>
           </div>
         </div>

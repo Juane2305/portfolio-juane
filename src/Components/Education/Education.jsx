@@ -65,13 +65,13 @@ const Education = () => {
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"
+              className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto"
             />
           </div>
 
           <div className="relative">
             
-            <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-blue-600 via-purple-600 to-pink-600"></div>
+            <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-blue-600 via-cyan-600 to-teal-600"></div>
 
             <motion.div
               variants={containerVariants}
@@ -110,7 +110,7 @@ const Education = () => {
                         </div>
                         <h3 className="text-xl font-bold text-gray-900 mb-1">{item.title}</h3>
                         <div className="flex items-center gap-2 text-gray-600 mb-3">
-                          <FaUniversity className="text-purple-600" />
+                          <FaUniversity className="text-blue-600" />
                           <p className="font-semibold">{item.institution}</p>
                         </div>
                       </div>
@@ -159,7 +159,7 @@ const Education = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-center"
+            className="mt-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl p-8 text-center"
           >
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
@@ -199,12 +199,12 @@ const Education = () => {
               animate={{ 
                 boxShadow: [
                   '0 0 20px rgba(59, 130, 246, 0.3)',
-                  '0 0 40px rgba(168, 85, 247, 0.4)',
+                  '0 0 40px rgba(6, 182, 212, 0.4)',
                   '0 0 20px rgba(59, 130, 246, 0.3)',
                 ]
               }}
               transition={{ duration: 2, repeat: Infinity }}
-              className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg"
+              className="inline-block bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-full font-bold text-lg"
             >
               {t('education.badge')}
             </motion.div>

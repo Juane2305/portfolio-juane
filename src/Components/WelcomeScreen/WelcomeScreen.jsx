@@ -15,7 +15,7 @@ const WelcomeScreen = ({ onComplete }) => {
   }, [onComplete]);
 
   return (
-    <div className="fixed inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 flex items-center justify-center z-50 overflow-hidden">
+    <div className="fixed inset-0 bg-gradient-to-br from-blue-600 via-cyan-600 to-teal-600 flex items-center justify-center z-50 overflow-hidden">
       
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -41,7 +41,7 @@ const WelcomeScreen = ({ onComplete }) => {
             ease: "easeInOut",
             delay: 1,
           }}
-          className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-indigo-400 rounded-full blur-3xl"
+          className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-cyan-400 rounded-full blur-3xl"
         />
       </div>
 

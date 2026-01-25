@@ -27,7 +27,7 @@ const FeaturedProjects = ({ onViewMore }) => {
 
   const projectColors = [
     'from-blue-600 to-cyan-600',
-    'from-purple-600 to-pink-600',
+    'from-cyan-700 to-blue-800',
     'from-green-600 to-teal-600',
     'from-orange-600 to-red-600',
   ];
@@ -57,7 +57,7 @@ const FeaturedProjects = ({ onViewMore }) => {
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"
+              className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto"
             />
           </div>
 
@@ -168,7 +168,7 @@ const FeaturedProjects = ({ onViewMore }) => {
                 onClick={onViewMore}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all"
+                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all"
               >
                 {t('projects.viewMore')}
               </motion.button>
@@ -279,7 +279,7 @@ const FeaturedProjects = ({ onViewMore }) => {
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-bold shadow-lg hover:shadow-xl transition-all"
+                        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-xl font-bold shadow-lg hover:shadow-xl transition-all"
                       >
                         <FaExternalLinkAlt />
                         Ver sitio web

@@ -39,7 +39,7 @@ const OtherProjects = () => {
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"
+              className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto"
             />
           </div>
           
