@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import type { ProjectDefinition } from "@/features/projects/projects.data";
 import { previewByIndex } from "@/features/projects/previews/previewList";
 import type { FloatingPreviewApi } from "../useFloatingPreview";
+import { useReducedMotion } from "@/shared/hooks/useReducedMotion";
 
 interface ProjectRowProps {
   project: ProjectDefinition;
@@ -25,6 +26,7 @@ export function ProjectRow({
 }: ProjectRowProps) {
   const { t } = useTranslation();
   const thumbRef = useRef<HTMLDivElement>(null);
+  const reduced = useReducedMotion();
   const to = `/proyectos/${project.slug}`;
 
   const floaterIsShot =
@@ -44,7 +46,7 @@ export function ProjectRow({
     <Link
       className="proj"
       to={to}
-      viewTransition
+      viewTransition={!reduced}
       data-i={index}
       data-id={project.slug}
       onPointerEnter={floater.onRowPointerEnter(index)}

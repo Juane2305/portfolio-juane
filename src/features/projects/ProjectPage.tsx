@@ -3,12 +3,18 @@ import { Link, Navigate, useParams, useViewTransitionState } from "react-router-
 import { useTranslation } from "react-i18next";
 import { getProject, projects } from "./projects.data";
 import { previewByIndex } from "./previews/previewList";
+import { useReducedMotion } from "@/shared/hooks/useReducedMotion";
 
 export function ProjectPage() {
   const { slug } = useParams();
   const { t } = useTranslation();
   const project = getProject(slug);
-  const isLeavingToHome = useViewTransitionState("/");
+  const reduced = useReducedMotion();
+  // Name the shared elements for every transition this page takes part in:
+  // to/from home, and to/from another case page (both endpoints are case paths).
+  const isHomeTransition = useViewTransitionState("/");
+  const isOwnTransition = useViewTransitionState(`/proyectos/${slug ?? ""}`);
+  const isTransitioning = isHomeTransition || isOwnTransition;
 
   if (!project) {
     return <Navigate to="/" replace />;
@@ -28,13 +34,13 @@ export function ProjectPage() {
       <Link
         className="back"
         to="/"
-        viewTransition
+        viewTransition={!reduced}
         state={{ fromProject: project.slug }}
       >
         <span className="arr">←</span> {t("case.back")}
       </Link>
       <header className="case-head">
-        <h1 className={isLeavingToHome ? "vt-title" : undefined}>
+        <h1 className={isTransitioning ? "vt-title" : undefined}>
           {t(`projects.${project.slug}.title`)}
         </h1>
         <p className="stagger" style={{ "--s": 1 } as CSSProperties}>
@@ -57,7 +63,7 @@ export function ProjectPage() {
           </div>
         ))}
       </dl>
-      <div className={isLeavingToHome ? "shot vt-shot" : "shot"}>
+      <div className={isTransitioning ? "shot vt-shot" : "shot"}>
         <Preview />
       </div>
       <section className="sec">
@@ -82,7 +88,7 @@ export function ProjectPage() {
           ))}
         </ul>
       </section>
-      <Link className="next" to={`/proyectos/${project.next}`} viewTransition>
+      <Link className="next" to={`/proyectos/${project.next}`} viewTransition={!reduced}>
         <span>
           <small>{t("case.nextLabel")}</small>
           <strong>{t(`projects.${nextProject.slug}.title`)}</strong>

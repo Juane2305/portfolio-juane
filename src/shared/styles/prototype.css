@@ -154,7 +154,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .sen .btn{font-size:.62em;background:#0B63D1;color:#fff;padding:.55em 1em;border-radius:99em}
 .tr{display:grid;grid-template-columns:1fr 3.2em 5.2em;gap:.8em;align-items:center;font-size:.74em;padding-block:.55em;border-top:1px solid #F0F0EE}
 .tr span:nth-child(2){text-align:right;font-variant-numeric:tabular-nums;font-weight:500}
-.chip{justify-self:end;font-size:.85em;padding:.25em .65em;border-radius:99em;background:#EEF3F0;color:#2E6B4F}
+.chip{justify-self:end;white-space:nowrap;font-size:.85em;padding:.25em .65em;border-radius:99em;background:#EEF3F0;color:#2E6B4F}
 .chip.low{background:#FBEAE1;color:#B04A18}
 
 .eva-logo{width:6.4em;height:1.87em;background:left center/contain no-repeat}
