@@ -1,246 +1,195 @@
 {
-    "languageSelector": {
-        "title": "Select your language",
-        "subtitle": "Selecciona tu idioma",
-        "spanish": "Español",
-        "english": "English"
+  "meta": {
+    "title": "Juane Elizondo — Front End Developer",
+    "description": "Front end developer based in Mendoza, Argentina. Co-founder of Hornero Digital, building my own products: Evalene and Sendo."
+  },
+  "nav": {
+    "logo": "Juane Elizondo",
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact",
+    "langEs": "ES",
+    "langEn": "EN",
+    "langGroupLabel": "Language"
+  },
+  "brand": {
+    "wordmark": "Juane Elizondo."
+  },
+  "hero": {
+    "headlineBefore": "Hi, I'm Juane",
+    "headlineAfter": "A front end focused developer based in Mendoza. I co-founded Hornero Digital and build my own products.",
+    "available": "Available for projects",
+    "linkedin": "LinkedIn ↗",
+    "github": "GitHub ↗",
+    "cv": "Download CV",
+    "cvHref": "/cv/juane-elizondo-cv-en.pdf"
+  },
+  "work": {
+    "heading": "Work",
+    "count": "03",
+    "viewCase": "View case"
+  },
+  "projects": {
+    "evalene": {
+      "title": "Evalene",
+      "listDescription": "Practice management with appointments and WhatsApp/email reminders.",
+      "lead": "Less admin work for your practice: appointments, patients and clinical notes in one calm place, with WhatsApp and email reminders.",
+      "facts": {
+        "role": "Product, front end, backend and infrastructure",
+        "type": "Own product · SaaS",
+        "status": "In production",
+        "site": "evalene.app"
+      },
+      "about": [
+        "Evalene exists to simplify the day-to-day of a medical practice. The schedule, each patient's record and clinical notes live together in a calm interface, built to be used between sessions.",
+        "I designed and built the whole product, from idea to production."
+      ],
+      "did": [
+        "Scheduling and appointment management",
+        "WhatsApp and email reminders",
+        "Patient records and clinical notes"
+      ],
+      "previewCaption": "Tuesday 14th · 3 appointments",
+      "previewAppt1Name": "Paula G.",
+      "previewAppt1Note": "First consultation",
+      "previewAppt2Name": "Martín R.",
+      "previewAppt2Note": "Follow-up",
+      "previewFree": "Open slot",
+      "previewAppt3Name": "Carla M.",
+      "previewAppt3Note": "Follow-up",
+      "previewToast": "Reminder sent over WhatsApp"
     },
-    "welcome": {
-        "greeting": "Welcome to the portfolio of",
-        "name": "Juan Emilio Elizondo",
-        "role": "Front End Developer"
+    "sendo": {
+      "title": "Sendo",
+      "listDescription": "Stock and sales management for small businesses. Contract project.",
+      "lead": "Stock and sales management system for small businesses: products, movements and sales, without the overhead of a full ERP.",
+      "facts": {
+        "role": "Contract development",
+        "type": "Client project",
+        "for": "Small businesses and shops",
+        "site": "sendostock.com"
+      },
+      "about": [
+        "Many shops still track stock on a spreadsheet. Sendo shows in one view what's in stock, what's about to run out, and what sold.",
+        "I work on the product on contract. The focus is making the most frequent task, logging a movement, take seconds."
+      ],
+      "did": [
+        "Product catalog",
+        "Inbound and outbound stock movements",
+        "Low stock alerts",
+        "Sales logging"
+      ],
+      "previewTitle": "Products",
+      "previewNewButton": "+ New",
+      "previewItem1": "Yerba mate 1 kg",
+      "previewItem2": "Olive oil 500 ml",
+      "previewItem3": "Flour 000",
+      "previewItem4": "Malbec wine",
+      "previewInStock": "In stock",
+      "previewLowStock": "Low stock",
+      "previewToast": "Sale logged · stock updated"
     },
-    "nav": {
-        "home": "Home",
-        "about": "About",
-        "experience": "Experience",
-        "skills": "Skills",
-        "projects": "Projects",
-        "education": "Education",
-        "contact": "Contact"
-    },
-    "hero": {
-        "greeting": "Hi, I'm",
-        "name": "Juan Emilio Elizondo",
-        "role": "Front End Developer",
-        "description": "Front End Developer with real experience creating web applications and systems. Specialized in React and Tailwind CSS, building clean, scalable, and user-oriented interfaces.",
-        "cta": "View my projects",
-        "contact": "Contact me"
-    },
-    "about": {
-        "title": "Professional Profile",
-        "intro": "Front End Developer with real experience creating web applications and systems.",
-        "points": [
-            "Experience in companies and projects in tourism, insurance, fitness, rental management, and stock management systems with sales.",
-            "Specialized in React and Tailwind CSS, creating clean, scalable, and user-oriented interfaces.",
-            "Active collaboration in multidisciplinary teams under agile methodologies (Scrum and Kanban).",
-            "Passion for learning new technologies, integrating external services through APIs, and applying good programming practices."
-        ]
-    },
-    "experience": {
-        "title": "Professional Experience",
-        "subtitle": "Front End Developer (Contractor)",
-        "description": "Real estate management and stock management system projects",
-        "responsibilities": [
-            "Development and maintenance of user interfaces with React + Tailwind CSS.",
-            "Integration with external APIs and backend systems (Java, Spring Boot, MySQL).",
-            "Participation in the design of complete business flows and UX optimization.",
-            "Collaboration in agile teams, meeting deadlines and responsibilities.",
-            "Experience leading and collaborating on real-world projects, making technical decisions alongside senior developers."
-        ],
-        "realExperience": "💼 Real experience:",
-        "realExperienceText": "I have worked on projects in different sectors including tourism, insurance, fitness, rental management, and stock management systems with sales, always focusing on creating the best user experiences from the front end.",
-        "stats": {
-            "projects": "Real Projects",
-            "dedication": "Dedication",
-            "experience": "Years Experience",
-            "learning": "Learning"
-        }
-    },
-    "skills": {
-        "title": "Stack and Skills",
-        "categories": {
-            "frontend": {
-                "title": "Front End",
-                "items": ["React", "Tailwind CSS", "TypeScript", "Redux", "JavaScript (ES6+)", "HTML5", "CSS3", "Responsive Design"]
-            },
-            "integration": {
-                "title": "Integration",
-                "items": ["REST APIs", "External services", "JWT Authentication", "Axios"]
-            },
-            "backend": {
-                "title": "Backend (Complementary)",
-                "items": ["Java", "Spring Boot", "MySQL", "Node.js"]
-            },
-            "tools": {
-                "title": "Tools and Methodologies",
-                "items": ["Git & GitHub", "Scrum", "Kanban", "Agile Development", "Teamwork", "VS Code"]
-            },
-            "soft": {
-                "title": "Soft Skills",
-                "items": ["Self-taught", "Fast learner", "Collaboration with seniors", "Adaptability", "Effective communication"]
-            }
-        },
-        "specialization": {
-            "title": "Specialization in React & Tailwind CSS",
-            "description": "My main focus is on creating exceptional user interfaces with React and Tailwind CSS, always applying best practices and keeping up to date with the latest Front End development trends."
-        }
-    },
-    "projects": {
-        "title": "Featured Projects",
-        "otherProjects": "Other Projects",
-        "otherProjectsDesc": "Additional projects with live demos and available repositories",
-        "confidentialNote": " Demo and repository not available due to confidentiality agreement",
-        "viewMore": "View More Projects",
-        "featured": [
-            {
-                "title": "Invitarly",
-                "description": "Complete platform for creating and managing digital invitations for events. System with integrated payment gateway, event management, and administration panel.",
-                "features": [
-                    "Customizable digital invitation creation",
-                    "Integrated payment gateway (MercadoPago)",
-                    "RSVP confirmation system",
-                    "Administration panel for event management",
-                    "Complete Frontend-Backend integration"
-                ],
-                "tech": ["React", "Tailwind CSS", "Java", "Spring Boot", "MySQL"],
-                "link": "https://invitarly.com",
-                "repo": "https://github.com/Juane2305/invitarly-front",
-                "confidential": false
-            },
-            {
-                "title": "Real Estate Management System",
-                "description": "Creation of a web platform to manage contracts, properties, and users. Enterprise project under confidentiality agreement.",
-                "features": [
-                    "Integration with external APIs",
-                    "Dynamic selects and multi-step forms",
-                    "Filtering and pagination system",
-                    "Complete property and contract management"
-                ],
-                "tech": ["React", "Tailwind CSS", "REST APIs", "Java", "Spring Boot"],
-                "confidential": true
-            },
-            {
-                "title": "Stock Management System with Sales",
-                "description": "Web application for inventory control, sales, and user roles (administrator, employee, customer).",
-                "features": [
-                    "Development of interactive dashboards",
-                    "Report and statistics system",
-                    "Product and user management",
-                    "Real-time inventory control"
-                ],
-                "tech": ["React", "Tailwind CSS", "Redux", "Java", "Spring Boot", "MySQL"],
-                "confidential": true
-            },
-            {
-                "title": "Koink - Financial Management",
-                "description": "Advanced financial management platform that allows users to project their long-term economic health. The system facilitates the creation of dynamic budgets, financial goal management, and multi-currency support, transforming complex data into decision-making tools for smarter asset management.",
-                "features": [
-                    "Long-term financial health projection",
-                    "Dynamic budget creation",
-                    "Financial goal management",
-                    "Multi-currency support and asset management"
-                ],
-                "tech": ["React", "Redux", "TypeScript", "Tailwind CSS", "Supabase"],
-                "link": "https://www.koinkapp.com",
-                "confidential": false
-            }
-        ]
-    },
-    "education": {
-        "title": "Academic Background",
-        "stats": {
-            "bootcamps": "Bootcamps",
-            "certifications": "Certifications",
-            "studyHours": "Study hours",
-            "continuousLearning": "Continuous learning"
-        },
-        "badge": "🚀 In constant learning and growth",
-        "viewCertificate": "View certificate",
-        "items": [
-            {
-                "institution": "Digital House",
-                "year": "2024",
-                "title": "Full Stack Developer Certification",
-                "description": "Certified Tech Developer program created in collaboration by Globant and Mercado Libre. Over 1500 hours of theoretical and practical instruction.",
-                "certificateKey": "digitalHouse"
-            },
-            {
-                "institution": "Henry",
-                "year": "2024",
-                "title": "Full Stack Developer Bootcamp",
-                "description": "Intensive 4-month program with collaborative projects in teams of up to 8 people.",
-                "certificateKey": "henry"
-            },
-            {
-                "institution": "Complementary Courses",
-                "year": "2023-2024",
-                "title": "Java, OOP, Spring Boot, and MySQL",
-                "description": "Continuous training in backend technologies for better Front End integration."
-            },
-            {
-                "institution": "Complementary Training",
-                "year": "2023",
-                "title": "Object-Oriented Programming (OOP)",
-                "description": "Certificate in OOP fundamentals applied to Java.",
-                "certificateKeys": ["poo"]
-            },
-            {
-                "institution": "Complementary Training",
-                "year": "2023",
-                "title": "Spring Boot",
-                "description": "Certificate in building APIs with Spring Boot.",
-                "certificateKeys": ["springboot"]
-            },
-            {
-                "institution": "EF Set",
-                "year": "2024",
-                "title": "English Certification",
-                "description": "English proficiency certification for international work.",
-                "certificateKey": "efset"
-            }
-        ]
-    },
-    "whatsapp": {
-        "label": "Chat on WhatsApp",
-        "placeholder": "Hi Juane, I'm interested in your work for...",
-        "defaultMessage": "Hi Juane, I'd like to get in touch with you.",
-        "question": "What would you like to say?",
-        "send": "Send",
-        "cancel": "Cancel"
-    },
-    "contact": {
-        "title": "Contact",
-        "subtitle": "Have a project in mind?",
-        "description": "I'm available to collaborate on Front End projects. Let's work together!",
-        "whyWorkWithMe": "Why work with me?",
-        "benefits": [
-            "✨ Focus on user experience",
-            "🚀 Clean and scalable code",
-            "⚡ Fast and efficient delivery",
-            "🤝 Constant communication",
-            "💡 Creative solutions"
-        ],
-        "form": {
-            "name": "Name",
-            "namePlaceholder": "Your name",
-            "email": "Email",
-            "emailPlaceholder": "example@example.com",
-            "message": "Message",
-            "messagePlaceholder": "Tell me about your project...",
-            "send": "Send Message",
-            "sending": "Sending...",
-            "success": "Message sent successfully!",
-            "error": "Error sending message. Please try again."
-        }
-    },
-    "footer": {
-        "description": "Front End Developer specialized in React and Tailwind CSS. Creating exceptional web experiences.",
-        "quickLinks": "Quick Links",
-        "contactTitle": "Contact",
-        "rights": "All rights reserved",
-        "madeWith": "Made with",
-        "by": "by",
-        "developedWith": "Developed with"
+    "hornero": {
+      "title": "Hornero Digital",
+      "listDescription": "Website and brand identity for the Odoo consultancy I co-founded.",
+      "lead": "The Odoo implementation consultancy I co-founded. I built the website and the brand identity.",
+      "facts": {
+        "role": "Co-founder · design and development",
+        "type": "Website and identity",
+        "service": "Odoo implementation",
+        "site": "hornerodigital.com"
+      },
+      "about": [
+        "The hornero bird builds its home out of mud, one careful layer at a time, made to last. The brand takes that idea: tidy implementations that stay with a company for the long run.",
+        "I designed the identity and built the consultancy's website."
+      ],
+      "did": [
+        "Brand identity",
+        "Company website",
+        "Odoo services content"
+      ],
+      "previewLogoAlt": "Hornero Digital isotype",
+      "previewTitle": "Hornero Digital",
+      "previewSubtitle": "Odoo implementation"
     }
+  },
+  "factLabels": {
+    "role": "Role",
+    "type": "Type",
+    "status": "Status",
+    "site": "Site",
+    "for": "For",
+    "service": "Service"
+  },
+  "case": {
+    "back": "All work",
+    "aboutHeading": "About the project",
+    "didHeading": "What I did",
+    "nextLabel": "Next project"
+  },
+  "about": {
+    "heading": "About me",
+    "statement": [
+      { "text": "I like an interface to feel ", "accent": false },
+      { "text": "simple", "accent": true },
+      {
+        "text": ", even when there's complex logic behind it. I design and build products end to end, from the idea to the point where someone uses them ",
+        "accent": false
+      },
+      { "text": "every day.", "accent": true }
+    ],
+    "prose": "I work with React, Tailwind and TypeScript on the front end, and with Java, Spring Boot and Supabase on the server side. Before that, I worked as a contractor on projects in tourism, insurance, fitness, rentals and sales.",
+    "rows": [
+      { "year": "Now", "label": "Co-founder", "sub": "Hornero Digital" },
+      { "year": "Now", "label": "Own product", "sub": "Evalene" },
+      { "year": "Now", "label": "Contract developer", "sub": "Sendo" },
+      { "year": "Before", "label": "Front End Developer", "sub": "Contractor" }
+    ]
+  },
+  "education": {
+    "heading": "Education",
+    "rows": [
+      {
+        "year": "2022 – 2024",
+        "title": "Certified Tech Developer",
+        "sub": "Digital House",
+        "certLinks": [{ "label": "Certificate ↗", "href": "/DigitalHouse.pdf" }]
+      },
+      {
+        "year": "2024",
+        "title": "Full Stack Bootcamp",
+        "sub": "Henry",
+        "certLinks": [{ "label": "Certificate ↗", "href": "/HENRY.pdf" }]
+      },
+      {
+        "year": "2024",
+        "title": "English (B2)",
+        "sub": "EF SET",
+        "certLinks": [
+          { "label": "Certificate ↗", "href": "/EFSETCertificate.pdf" }
+        ]
+      },
+      {
+        "year": "2023",
+        "title": "OOP and Spring Boot",
+        "sub": "Complementary courses",
+        "certLinks": [
+          { "label": "OOP ↗", "href": "/certificates/POO.html" },
+          { "label": "Spring Boot ↗", "href": "/certificates/Springboot.html" }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Contact",
+    "question": "Have a project in mind? Write to me and let's talk about it.",
+    "email": "juane.elizondo23@gmail.com",
+    "copyDone": "Copied to clipboard",
+    "whatsapp": "WhatsApp ↗",
+    "whatsappHref": "https://wa.me/542612404253"
+  },
+  "footer": {
+    "rights": "© 2026 Juane Elizondo",
+    "location": "Mendoza, Argentina"
+  }
 }
