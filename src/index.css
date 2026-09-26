@@ -1,17 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
- 
+@import "tailwindcss";
+@import "@fontsource-variable/geist";
+@import "./shared/styles/prototype.css";
 
-
-
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html{
-  scroll-behavior: smooth;
+@theme {
+  --color-bg: #fbfbfa;
+  --color-ink: #161616;
+  --color-muted: #6e6e6c;
+  --color-accent: #c4531c;
+  --color-accent-ink: #a5441a;
 }

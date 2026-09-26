@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.juaneelizondo.com/</loc>
+    <loc>https://portfolio-juane-dev.vercel.app/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.juaneelizondo.com/cv.html</loc>
+    <loc>https://portfolio-juane-dev.vercel.app/proyectos/evalene</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.juaneelizondo.com/cv-en.html</loc>
+    <loc>https://portfolio-juane-dev.vercel.app/proyectos/sendo</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://portfolio-juane-dev.vercel.app/proyectos/hornero</loc>
     <priority>0.8</priority>
   </url>
 </urlset>
